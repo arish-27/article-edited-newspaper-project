@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#615e5b", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#7c2d1c", "on-background": "#1d1c14", "tertiary-fixed": "#ffddb6", "secondary-fixed": "#ffdad3", "secondary-fixed-dim": "#ffb4a4", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#643f00", "primary": "#000000", "inverse-surface": "#333028", "inverse-on-surface": "#f6f0e3", "surface-bright": "#fff9ec", "surface-container-high": "#eee8db", "surface-container": "#f3ede0", "on-surface": "#1d1c14", "surface-variant": "#e8e2d5", "on-tertiary-fixed": "#2a1800", "secondary": "#9b4330", "inverse-primary": "#cbc5c2", "outline": "#7d766f", "primary-fixed": "#e7e1de", "surface-dim": "#dfdacd", "background": "#fff9ec", "outline-variant": "#cec5bd", "on-tertiary-container": "#ab7a37", "on-primary-fixed": "#1d1b19", "on-tertiary": "#ffffff", "primary-container": "#1d1b19", "tertiary-fixed-dim": "#f6bc72", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "primary-fixed-dim": "#cbc5c2", "on-secondary-container": "#752717", "on-secondary-fixed": "#3e0500", "tertiary": "#000000", "on-secondary": "#ffffff", "surface-container-low": "#f9f3e6", "on-primary-fixed-variant": "#494644", "on-surface-variant": "#4b4640", "secondary-container": "#fe9078", "surface-container-highest": "#e8e2d5", "surface": "#fff9ec", "on-error": "#ffffff", "tertiary-container": "#2a1800", "on-error-container": "#93000a", "on-primary-container": "#878380" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "2rem", "margin-mobile": "1rem", "gutter-dense": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-xxl": "4rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-sm": ["Newsreader"], "headline-md": ["Newsreader"], "folio-header": ["Newsreader"], "headline-xl": ["Newsreader"], "quote-pull": ["EB Garamond"], "headline-lg": ["Newsreader"], "display-masthead": ["Newsreader"], "body-italic": ["EB Garamond"], "body-lead": ["EB Garamond"], "display-masthead-mobile": ["Newsreader"], "body-md": ["EB Garamond"], "dateline-meta": ["Courier Prime"], "headline-xl-mobile": ["Newsreader"], "label-caps": ["Courier Prime"] }, "fontSize": { "headline-sm": ["16px", { "lineHeight": "22px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "500" }], "folio-header": ["13px", { "lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "quote-pull": ["22px", { "lineHeight": "30px", "fontWeight": "500" }], "headline-lg": ["26px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-masthead": ["64px", { "lineHeight": "72px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-italic": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lead": ["19px", { "lineHeight": "28px", "fontWeight": "400" }], "display-masthead-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "0.05em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "dateline-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "0", "fontWeight": "600" }], "label-caps": ["10px", { "lineHeight": "12px", "letterSpacing": "0.14em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><div class="min-h-screen max-w-[1240px] mx-auto px-4 md:px-8 border-x border-outline/30 bg-surface shadow-2xl"><header class="w-full pt-4 pb-2 border-b-2 border-primary"><div class="flex flex-wrap items-center justify-between border-b border-outline/40 pb-2 mb-3 text-on-surface-variant font-dateline-meta text-dateline-meta uppercase tracking-wider"><div>SPECIAL INVESTIGATIVE DISPATCH • VOL. 01, NO. 4 • SPECIAL BROADSHEET EDITION</div><div class="flex items-center gap-4"><span>PRICE: TWO ANNAS</span><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline" src="https://lh3.googleusercontent.com/aida/AEtjO1V_2Q8b1AVb8_gG1VEj_vBGQlcw8aZJUlpHKP_31sHJqHkDQMZM1tMLaS3HyOhtgY-GtPa5bt8uJ-024Mn2SqzI8uvaa_nVIv5IF9lHnavloBesY1Zsm15R9a6rQ7tXasN6tHOXr0VpaCzU3wLb-qwyLKoUu4l9CcQmyhf_SiLF5W2DPCHqquAO6PjAWh4hSr05-tPeClRzKvWtSq9vTjTfNTEXRjuXBZPAWbg8MBuS_nCT9XlcfwJ2oqgm1vY5OntkMJHG0U4e0A"/></div></div><div class="relative py-4 text-center"><div class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 text-left border border-outline p-2 max-w-[170px] bg-surface-container-low"><p class="font-label-caps text-label-caps uppercase text-secondary font-bold">METROPOLITAN WEATHER</p><p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">CHENNAI 28°C • BENGALURU 24°C • HYD 26°C</p></div><h1 class="font-display-masthead text-display-masthead-mobile md:text-display-masthead uppercase text-primary tracking-tight font-black">THE TECHNOLOGY CHRONICLE</h1><p class="font-quote-pull text-quote-pull italic text-on-surface-variant mt-1 max-w-3xl mx-auto">An Independent Investigation into Artificial Intelligence, Indian IT &amp; the Urban Economy</p><div class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 text-right border border-outline p-2 max-w-[170px] bg-surface-container-low"><p class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">EDITION DESK</p><p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">THURSDAY, OCTOBER 24, 2026</p></div></div><div class="border-t border-b-2 border-primary py-1 mt-2"><nav class="flex flex-wrap items-center justify-center gap-1 md:gap-3" data-active-classes="bg-primary text-on-primary font-bold"><a class="px-3 py-1 font-folio-header text-folio-header uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" data-path="page-1-the-front-page" href="#">PAGE 1: THE FRONT PAGE</a><span class="text-outline select-none">•</span><a class="px-3 py-1 font-folio-header text-folio-header uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" data-path="page-2-ai-and-software-work" href="#">PAGE 2: AI &amp; SOFTWARE WORK</a><span class="text-outline select-none">•</span><a class="px-3 py-1 font-folio-header text-folio-header uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" data-path="page-3-software-roles" href="#">PAGE 3: SOFTWARE ROLES</a><span class="text-outline select-none">•</span><a class="px-3 py-1 font-folio-header text-folio-header uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" data-path="page-4-the-city-ripple-effect" href="#">PAGE 4: THE CITY RIPPLE EFFECT</a><span class="text-outline select-none">•</span><a class="px-3 py-1 font-folio-header text-folio-header uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" data-path="page-5-the-2030-outlook" href="#">PAGE 5: THE 2030 OUTLOOK</a></nav></div></header><main class="w-full py-6 bg-surface"><div class="flex flex-col w-full">
+<!-- SECTION FOLIO HEADER -->
+<div class="w-full flex items-center justify-between py-1 border-b-2 border-primary mb-3">
+<span class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-primary font-bold">SECTION III: WORKFORCE TAXONOMY &amp; SPECIALISATION ARCHIVES • FOLIO 22</span>
+<span class="font-dateline-meta text-dateline-meta uppercase text-secondary font-bold">SPECIAL TECHNICAL SUPPLEMENT • CHRONICLE PRESS</span>
+</div>
+<!-- HEADLINE & DECK -->
+<div class="w-full text-center pb-4 mb-4 border-b border-outline/40">
+<p class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-widest mb-1">EMPIRICAL OCCUPATIONAL CENSUS</p>
+<h2 class="font-headline-xl text-headline-xl uppercase text-primary tracking-tight font-black max-w-4xl mx-auto">
+      WHICH SOFTWARE JOBS MAY CHANGE?
+    </h2>
+<div class="w-16 h-0.5 bg-primary mx-auto my-2"></div>
+<p class="font-quote-pull text-quote-pull italic text-on-surface-variant max-w-3xl mx-auto">
+      A rigorous classification of enterprise software roles across algorithmic vulnerability vectors, human judgment thresholds, and synthetic code substitution.
+    </p>
+<div class="mt-2 flex items-center justify-center gap-6 font-dateline-meta text-dateline-meta text-on-surface-variant uppercase">
+<span>COMPILED BY THE GUILD REVISION COMMITTEE</span>
+<span>•</span>
+<span>DISPATCH ARCHIVE N° 884-J</span>
+<span>•</span>
+<span>METROPOLITAN BUREAU DISPATCH</span>
+</div>
+</div>
+<!-- THREE-COLUMN EDITORIAL EXPOSURE SPECTRUM -->
+<div class="w-full mb-6">
+<div class="flex items-center justify-between border-y border-primary py-1 mb-3 bg-surface-container-low px-2">
+<span class="font-folio-header text-folio-header uppercase tracking-wider text-primary">TABLEAU I: THE TRI-PARTITE EXPOSURE INDEX</span>
+<span class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase">MEASURED ACROSS 4,800 SPRINT REPOSITORIES</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-primary">
+<!-- COLUMN 1: HIGHER AI EXPOSURE -->
+<div class="p-4 border-b md:border-b-0 md:border-r border-primary bg-surface flex flex-col justify-between">
+<div>
+<div class="border-b-2 border-primary pb-2 mb-3">
+<span class="font-label-caps text-label-caps uppercase font-bold text-secondary block">TAXONOMIC CLASS 01</span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary font-bold">HIGHER AI EXPOSURE</h3>
+<p class="font-dateline-meta text-dateline-meta text-secondary font-bold mt-0.5">[ 72% – 94% COMPRESSION ]</p>
+</div>
+<div class="mb-4 bg-surface-container-high p-2 border border-outline/40">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface uppercase font-bold">MECHANICAL TRANSLATION • DETERMINISTIC VERIFICATION</p>
+<p class="font-body-italic text-body-italic text-on-surface-variant mt-1">
+              Tasks bounded by predictable syntax, pre-existing documentation corpora, and repeatable procedural assertions.
+            </p>
+</div>
+<div class="space-y-3 font-body-md text-body-md">
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">01. Basic Coding &amp; Boilerplate</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Scaffolding, getter-setters, schema translation, ORM glue logic.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">02. Simple CRUD Development</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Repetitive REST endpoint synthesis and form-data persistence.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">03. Manual QA &amp; Regression Clicking</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Heuristic-less UI pass-throughs substituted by headless autonomous agents.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">04. Routine Documentation</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">API doc generation from docstrings and internal wiki maintenance.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">05. L1/L2 Technical Support</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Log inspection, triaging, password recasts, standard escalation paths.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">06. Simple Data Processing</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Pandas script authoring, single-source ETL, regular expression matching.</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 flex items-center justify-between text-dateline-meta font-dateline-meta">
+<span class="uppercase">Vulnerability Vector:</span>
+<span class="font-bold text-secondary">MAXIMAL CONVERGENCE</span>
+</div>
+</div>
+<!-- COLUMN 2: MODERATE EXPOSURE -->
+<div class="p-4 border-b md:border-b-0 md:border-r border-primary bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="border-b-2 border-primary pb-2 mb-3">
+<span class="font-label-caps text-label-caps uppercase font-bold text-on-surface-variant block">TAXONOMIC CLASS 02</span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary font-bold">MODERATE EXPOSURE</h3>
+<p class="font-dateline-meta text-dateline-meta text-on-surface font-bold mt-0.5">[ 40% – 65% AUGMENTATION ]</p>
+</div>
+<div class="mb-4 bg-surface p-2 border border-outline/40">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface uppercase font-bold">HYBRID SYNTHESIS • HUMAN ORCHESTRATION</p>
+<p class="font-body-italic text-body-italic text-on-surface-variant mt-1">
+              Code artifact generated under Copilot assistance; human retains intent, boundary integration, and architectural verification.
+            </p>
+</div>
+<div class="space-y-3 font-body-md text-body-md">
+<div class="border-l-2 border-outline pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">01. Frontend UI Logic</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">State machines, complex reactivity, hydration, cross-browser quirks.</p>
+</div>
+<div class="border-l-2 border-outline pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">02. Backend Microservices</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Idempotency design, multi-tenant partitioning, gRPC protocol boundaries.</p>
+</div>
+<div class="border-l-2 border-outline pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">03. QA Automation Engineering</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Cypress/Playwright harness tuning, edge-case simulation, flaky test triage.</p>
+</div>
+<div class="border-l-2 border-outline pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">04. DevOps &amp; CI/CD Pipelines</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">ArgoCD declarative configurations, container hardening, artifact tracing.</p>
+</div>
+<div class="border-l-2 border-outline pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">05. SQL &amp; Analytics Optimization</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Execution plan analysis, index layout, window functions, lakehouse joins.</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 flex items-center justify-between text-dateline-meta font-dateline-meta">
+<span class="uppercase">Vulnerability Vector:</span>
+<span class="font-bold text-primary">CONDUCTOR EXPANSION</span>
+</div>
+</div>
+<!-- COLUMN 3: LOWER DIRECT REPLACEMENT -->
+<div class="p-4 bg-surface flex flex-col justify-between">
+<div>
+<div class="border-b-2 border-primary pb-2 mb-3">
+<span class="font-label-caps text-label-caps uppercase font-bold text-primary block">TAXONOMIC CLASS 03</span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary font-bold">LOWER DIRECT REPLACEMENT</h3>
+<p class="font-dateline-meta text-dateline-meta text-primary font-bold mt-0.5">[ 10% – 25% STRUCTURAL INSULATION ]</p>
+</div>
+<div class="mb-4 bg-surface-container-high p-2 border border-outline/40">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface uppercase font-bold">LEGAL CULPABILITY • HIGH-CONSEQUENCE SOVEREIGNTY</p>
+<p class="font-body-italic text-body-italic text-on-surface-variant mt-1">
+              High-judgment thresholds where errors carry catastrophic liability, physical peril, or irrevocable state corruption.
+            </p>
+</div>
+<div class="space-y-3 font-body-md text-body-md">
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">01. Enterprise System Architecture</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Decade-long legacy interop, domain-driven boundary negotiation.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">02. Cybersecurity &amp; Zero-Trust</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Adversarial red-teaming, kernel exploits, hardware root-of-trust audit.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">03. Distributed Systems (CAP Vector)</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Raft/Paxos consensus, split-brain recovery, Byzantine fault envelopes.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">04. Mission-Critical SCADA / Avionics</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">DO-178C avionics certification, surgical robotics, nuclear grid telemetry.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">05. Ethics &amp; Regulatory Compliance</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">DPDP Act adherence, EU AI Act conformity attestations, board culpability.</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 flex items-center justify-between text-dateline-meta font-dateline-meta">
+<span class="uppercase">Vulnerability Vector:</span>
+<span class="font-bold text-primary">JURISDICTIONAL SANCTUARY</span>
+</div>
+</div>
+</div>
+<!-- CRITICAL AXIOMATIC NOTE -->
+<div class="border-x border-b border-primary p-3 bg-surface-container text-center">
+<p class="font-quote-pull text-quote-pull italic text-primary">
+        “Automation exposure indicates task-level re-engineering, not occupation elimination.”
+      </p>
+<p class="font-dateline-meta text-dateline-meta uppercase text-on-surface-variant mt-1">
+        — Dr. K. Radhakrishnan, Monograph on Labor Recomposition in the Third Software Age, 1926/2026 Archive.
+      </p>
+</div>
+</div>
+<!-- MID-SPREAD RECTANGULAR AUDIT SPREAD -->
+<div class="w-full mb-8 border-2 border-primary p-4 bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between border-b-2 border-primary pb-3 mb-4 gap-2">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">OPERATIONAL PROTOCOL SPECIMEN</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-primary font-bold">
+          THE SPRINT REBALANCING AUDIT
+        </h3>
+<p class="font-body-italic text-body-italic text-on-surface-variant">
+          Structural transition model for an enterprise software squad (2022 vs. 2028 Projected Target)
+        </p>
+</div>
+<div class="p-2 border border-primary bg-surface-container-high text-right">
+<p class="font-label-caps text-label-caps uppercase text-primary font-bold">HEADCOUNT RATIO</p>
+<p class="font-dateline-meta text-dateline-meta text-secondary font-bold">20 TRADITIONAL → 11 ORCHESTRATED</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+<!-- SPRINT 2022 BREAKDOWN -->
+<div class="lg:col-span-4 border border-outline/40 p-3 bg-surface">
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-headline-sm text-headline-sm uppercase text-primary font-bold">ERA 2022: MANUAL PYRAMID</span>
+<span class="font-dateline-meta text-dateline-meta text-on-surface-variant">20 HEADS TOTAL</span>
+</div>
+<ul class="font-dateline-meta text-dateline-meta space-y-1.5 uppercase">
+<li class="flex justify-between border-b border-outline/10 pb-0.5"><span>Junior/Boilerplate Coders</span><span class="font-bold">08</span></li>
+<li class="flex justify-between border-b border-outline/10 pb-0.5"><span>Mid-Tier Feature Engineers</span><span class="font-bold">06</span></li>
+<li class="flex justify-between border-b border-outline/10 pb-0.5"><span>Manual QA / Regression</span><span class="font-bold">03</span></li>
+<li class="flex justify-between border-b border-outline/10 pb-0.5"><span>DevOps &amp; Infra Config</span><span class="font-bold">01</span></li>
+<li class="flex justify-between"><span>Lead Architect &amp; PM</span><span class="font-bold">02</span></li>
+</ul>
+<div class="mt-3 p-1.5 bg-surface-container-high border border-outline/20 text-center font-label-caps text-label-caps text-on-surface-variant">
+          PRIMARY BOTTLENECK: MANUAL SYNTAX WRITING
+        </div>
+</div>
+<!-- INLINE ARCHIVAL FLOW CHART -->
+<div class="lg:col-span-4 flex flex-col items-center justify-center p-2 text-center">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold mb-1 tracking-widest">TRANSMUTATION CYCLE</span>
+<svg class="w-full max-w-[280px] h-32 text-primary" fill="none" viewbox="0 0 280 120" xmlns="http://www.w3.org/2000/svg">
+<!-- Outer border -->
+<rect height="116" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5" width="276" x="2" y="2"></rect>
+<!-- Box Left -->
+<rect fill="#ede4d1" height="40" stroke="currentColor" stroke-width="1" width="70" x="15" y="40"></rect>
+<text fill="#000000" font-family="Newsreader" font-size="10" font-weight="bold" text-anchor="middle" x="50" y="58">100%</text>
+<text fill="#000000" font-family="Courier Prime" font-size="8" text-anchor="middle" x="50" y="70">HUMAN SLOG</text>
+<!-- Arrow 1 -->
+<line stroke="currentColor" stroke-width="1.5" x1="90" x2="115" y1="60" y2="60"></line>
+<polygon fill="currentColor" points="115,57 122,60 115,63"></polygon>
+<!-- Core Node -->
+<circle cx="140" cy="60" fill="#1d1b19" r="18"></circle>
+<text fill="#ffffff" font-family="Courier Prime" font-size="8" font-weight="bold" text-anchor="middle" x="140" y="58">LLM</text>
+<text fill="#fe9078" font-family="Courier Prime" font-size="7" text-anchor="middle" x="140" y="68">CORE</text>
+<!-- Arrow 2 -->
+<line stroke="currentColor" stroke-width="1.5" x1="162" x2="187" y1="60" y2="60"></line>
+<polygon fill="currentColor" points="187,57 194,60 187,63"></polygon>
+<!-- Box Right -->
+<rect fill="#ede4d1" height="40" stroke="currentColor" stroke-width="1" width="70" x="195" y="40"></rect>
+<text fill="#000000" font-family="Newsreader" font-size="10" font-weight="bold" text-anchor="middle" x="230" y="58">4.2X</text>
+<text fill="#000000" font-family="Courier Prime" font-size="8" text-anchor="middle" x="230" y="70">VELOCITY</text>
+</svg>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant mt-2 italic">
+          Synthetic acceleration reallocates capital from pure draft coders into systemic verification pods.
+        </p>
+</div>
+<!-- SPRINT 2028 BREAKDOWN -->
+<div class="lg:col-span-4 border border-primary p-3 bg-surface-container">
+<div class="flex items-center justify-between border-b border-primary pb-1 mb-2">
+<span class="font-headline-sm text-headline-sm uppercase text-primary font-bold">ERA 2028: ORCHESTRATED POD</span>
+<span class="font-dateline-meta text-dateline-meta text-secondary font-bold">11 HEADS + AGENTS</span>
+</div>
+<ul class="font-dateline-meta text-dateline-meta space-y-1.5 uppercase">
+<li class="flex justify-between border-b border-outline/10 pb-0.5"><span>AI Systems Orchestrators</span><span class="font-bold">03</span></li>
+<li class="flex justify-between border-b border-outline/10 pb-0.5"><span>Verification &amp; Eval Engineers</span><span class="font-bold">03</span></li>
+<li class="flex justify-between border-b border-outline/10 pb-0.5"><span>Lead System Architect</span><span class="font-bold">02</span></li>
+<li class="flex justify-between border-b border-outline/10 pb-0.5"><span>SRE &amp; Security Red-Teamer</span><span class="font-bold">02</span></li>
+<li class="flex justify-between"><span>Regulatory &amp; Data Steward</span><span class="font-bold">01</span></li>
+</ul>
+<div class="mt-3 p-1.5 bg-primary text-on-primary border border-primary text-center font-label-caps text-label-caps font-bold tracking-widest">
+          PRIMARY FOCUS: SAFETY, CONCURRENCY, ETHICS
+        </div>
+</div>
+</div>
+</div>
+<!-- MAJOR FEATURE: THE 12 EMERGING TECHNICAL SPECIALISATIONS OF 2030 -->
+<div class="w-full">
+<div class="text-center border-t-2 border-b border-primary py-2 mb-4 bg-surface-container-high">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">CANONICAL GAZETTEER OF THE FUTURE ENTERPRISE</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-primary font-black tracking-wider">
+        THE 12 EMERGING TECHNICAL SPECIALISATIONS OF 2030
+      </h3>
+<p class="font-body-italic text-body-italic text-on-surface-variant max-w-2xl mx-auto">
+        Certified classifications for the coming decade of machine intelligence deployment, hardware sovereignty, and cognitive infrastructure.
+      </p>
+</div>
+<!-- 12-PART CLASSIFIED/NEWSPAPER GRID (3 cols on desktop) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-primary">
+<!-- ITEM 01 -->
+<div class="p-3 border-r border-b border-primary bg-surface flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 01</span>
+<span class="font-label-caps text-label-caps bg-surface-container px-1 py-0.5 border border-outline/30 uppercase">DEMAND: CRITICAL</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">AI App Developer</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Context Windows &amp; Orchestration Agents</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Engineers fluent in multi-agent routing, tool-calling paradigms, dynamic semantic memory buffers, and stateful human-in-the-loop interfaces.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">LangGraph • Semantic Kernel</span>
+</div>
+</div>
+<!-- ITEM 02 -->
+<div class="p-3 border-r border-b border-primary bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 02</span>
+<span class="font-label-caps text-label-caps bg-surface px-1 py-0.5 border border-outline/30 uppercase">DEMAND: VERY HIGH</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">Machine Learning Engineer</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Weights, Quantization &amp; LoRA Adaptation</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Focused on fine-tuning foundational weights to bespoke enterprise corpora, AWQ/GPTQ 4-bit compression, and inference latency reduction.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">vLLM • PyTorch • FlashAttention</span>
+</div>
+</div>
+<!-- ITEM 03 -->
+<div class="p-3 border-r border-b border-primary bg-surface flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 03</span>
+<span class="font-label-caps text-label-caps bg-surface-container px-1 py-0.5 border border-outline/30 uppercase">DEMAND: EXCEPTIONAL</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">Data Systems Engineer</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Vector Stores &amp; Realtime Lineage</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Mastery over billion-node HNSW graph indices, Iceberg/Delta lake architectures, and real-time chunking engines feeding RAG systems.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">Qdrant • Milvus • Apache Iceberg</span>
+</div>
+</div>
+<!-- ITEM 04 -->
+<div class="p-3 border-r border-b border-primary bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 04</span>
+<span class="font-label-caps text-label-caps bg-surface px-1 py-0.5 border border-outline/30 uppercase">DEMAND: HIGH</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">Cloud Infra Architect</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Hybrid Multi-Cloud Fabrics</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Designing sovereign hybrid boundaries, edge caching networks, dynamic GPU cluster allocation, and multi-region failover fabrics.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">Terraform • Crossplane • eBPF</span>
+</div>
+</div>
+<!-- ITEM 05 -->
+<div class="p-3 border-r border-b border-primary bg-surface flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 05</span>
+<span class="font-label-caps text-label-caps bg-surface-container px-1 py-0.5 border border-outline/30 uppercase">DEMAND: ESSENTIAL</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">MLOps Engineer</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Continuous Training &amp; Model Drift</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Automating model retraining pipelines, tracking dataset drift, managing canary weight deployments, and running automated latency gates.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">Kubeflow • MLflow • Ray Core</span>
+</div>
+</div>
+<!-- ITEM 06 -->
+<div class="p-3 border-r border-b border-primary bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 06</span>
+<span class="font-label-caps text-label-caps bg-surface px-1 py-0.5 border border-outline/30 uppercase">DEMAND: PARAMOUNT</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">AI Cybersecurity Specialist</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Prompt Injection &amp; Model Extraction</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Counteracting indirect prompt injections, jailbreak vectors, data poisoning attacks, model weight theft, and shadow inference nodes.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">GARAK • OWASP LLM-Top-10</span>
+</div>
+</div>
+<!-- ITEM 07 -->
+<div class="p-3 border-r border-b border-primary bg-surface flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 07</span>
+<span class="font-label-caps text-label-caps bg-surface-container px-1 py-0.5 border border-outline/30 uppercase">DEMAND: CRITICAL</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">AI Testing &amp; Eval Eng</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Synthetic Benchmarks &amp; Hallucination</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Establishing programmatic truth-evaluation benchmarks (Ragas, DeepEval), synthetic red-teaming tests, and drift degradation suites.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">Ragas • DeepEval • Promptfoo</span>
+</div>
+</div>
+<!-- ITEM 08 -->
+<div class="p-3 border-r border-b border-primary bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 08</span>
+<span class="font-label-caps text-label-caps bg-surface px-1 py-0.5 border border-outline/30 uppercase">DEMAND: REGULATORY</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">AI Governance &amp; Risk Specialist</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Statutory Compliance &amp; Audit Lineage</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Bridging technical system telemetry with the Indian DPDP Act, the EU AI Act, intellectual property audits, and bias mitigation filing.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">ISO 42001 • NIST AI RMF</span>
+</div>
+</div>
+<!-- ITEM 09 -->
+<div class="p-3 border-r border-b border-primary bg-surface flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 09</span>
+<span class="font-label-caps text-label-caps bg-surface-container px-1 py-0.5 border border-outline/30 uppercase">DEMAND: VERY HIGH</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">Site Reliability Eng (SRE)</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Non-Deterministic Latency Loops</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Guaranteed uptime against bursty token streams, catastrophic cascade failures in agent swarms, and memory circuit breaker engineering.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">OpenTelemetry • Chaos Mesh</span>
+</div>
+</div>
+<!-- ITEM 10 -->
+<div class="p-3 border-r border-b border-primary bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 10</span>
+<span class="font-label-caps text-label-caps bg-surface px-1 py-0.5 border border-outline/30 uppercase">DEMAND: STRATEGIC</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">AI Product Specialist</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Cognitive Workflows &amp; Unit Economics</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Specifying business cases with non-deterministic outcomes, balancing token unit-economics against human labor costs, and UX flows.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">Tokenomics • Cognitive UX</span>
+</div>
+</div>
+<!-- ITEM 11 -->
+<div class="p-3 border-r border-b border-primary bg-surface flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 11</span>
+<span class="font-label-caps text-label-caps bg-surface-container px-1 py-0.5 border border-outline/30 uppercase">DEMAND: RAPID GROWTH</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">AI Integration Engineer</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Legacy Mainframe &amp; ERP Bridging</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Hooking modern frontier models into antiquated SAP, Oracle, COBOL ledger cores, and custom mainframe transaction backbones.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">MuleSoft • Webhooks • GraphQL</span>
+</div>
+</div>
+<!-- ITEM 12 -->
+<div class="p-3 border-r border-b border-primary bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-dateline-meta text-dateline-meta font-bold text-secondary">CATALOGUE N° 12</span>
+<span class="font-label-caps text-label-caps bg-surface px-1 py-0.5 border border-outline/30 uppercase">DEMAND: CRITICAL</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold leading-tight">Sovereign Data Center Specialist</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">Vector: Thermal Physics, Silicon &amp; Subsea Fiber</p>
+<p class="font-body-md text-body-md text-on-surface mt-2 leading-snug">
+            Managing direct-to-chip liquid cooling loops, 800G optical interconnect switches, megawatt grid tie-ins, and on-soil data sovereignty.
+          </p>
+</div>
+<div class="mt-3 pt-2 border-t border-outline/20 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>COMPETENCY:</span>
+<span class="font-bold text-primary">Infiniband • RoCE • Immersion</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM ARCHIVAL FOOTNOTE & VERIFICATION SEAL -->
+<div class="mt-6 pt-4 border-t-2 border-primary flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 border-2 border-primary flex items-center justify-center font-dateline-meta text-dateline-meta font-bold bg-surface-container-high">
+        SEC
+      </div>
+<div>
+<p class="font-label-caps text-label-caps uppercase font-bold text-primary">ARCHIVAL DOCUMENT ATTESTATION</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">
+          CERTIFIED BY THE TECHNOLOGY CHRONICLE GUILD REGISTER • SYSTEM RECORD 2026-F22
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-2 font-dateline-meta text-dateline-meta uppercase text-on-surface-variant">
+<span>END OF FOLIO 22</span>
+<span>•</span>
+<a class="text-primary font-bold underline hover:text-secondary" data-path="page-4-the-city-ripple-effect" href="#">
+        PROCEED TO PAGE 4: THE CITY RIPPLE EFFECT →
+      </a>
+</div>
+</div>
+</div></main><footer class="w-full border-t-4 border-double border-primary pt-6 pb-12 mt-12 text-on-surface-variant"><div class="grid grid-cols-1 md:grid-cols-4 gap-6 pb-6 border-b border-outline/30 font-body-md text-body-md"><div class="border-r border-outline/20 pr-4"><h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-2">THE CHRONICLE</h4><p class="font-dateline-meta text-dateline-meta leading-relaxed">THE TECHNOLOGY CHRONICLE — SPECIAL DIGITAL EDITION.<br/>An independent archival dispatch published for computational economists and technologists.</p></div><div class="border-r border-outline/20 pr-4"><h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-2">RESEARCH METHODOLOGY</h4><p class="font-dateline-meta text-dateline-meta leading-relaxed">Field dispatches compiled from engineering centers across Whitefield, Cyberabad, and OMR. Triangulated empirical metrics and qualitative salon depositions.</p></div><div class="border-r border-outline/20 pr-4"><h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-2">INDEX OF DISPATCHES</h4><ul class="font-dateline-meta text-dateline-meta space-y-1 uppercase"><li><a class="hover:underline" data-path="page-1-the-front-page" href="#">I. Front Dispatches</a></li><li><a class="hover:underline" data-path="page-2-ai-and-software-work" href="#">II. Cognitive Automation</a></li><li><a class="hover:underline" data-path="page-3-software-roles" href="#">III. Guild Realignments</a></li><li><a class="hover:underline" data-path="page-4-the-city-ripple-effect" href="#">IV. Municipal Contagion</a></li><li><a class="hover:underline" data-path="page-5-the-2030-outlook" href="#">V. The 2030 Horizon</a></li></ul></div><div><h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-2">STATUTORY ARCHIVE</h4><div class="p-2 border border-outline bg-surface-container-low text-center"><p class="font-label-caps text-label-caps font-bold tracking-widest text-secondary">REGISTERED PRESS ARCHIVE</p><p class="font-dateline-meta text-dateline-meta font-bold mt-1 text-on-surface">ISSN: 1944-8210 / BENGALURU</p><p class="font-dateline-meta text-dateline-meta mt-1 text-on-surface-variant">AUTHENTICATED BROADSHEET SPECIMEN</p></div></div></div><div class="flex flex-col md:flex-row items-center justify-between pt-4 font-dateline-meta text-dateline-meta gap-2"><p>© 2026 THE TECHNOLOGY CHRONICLE PUBLISHING CO. ALL ARCHIVAL RIGHTS RESERVED.</p><p class="tracking-widest uppercase">TYPESET IN NEWSREADER &amp; GARAMOND • IMPRIMATUR NO. 4482-B</p></div></footer></div></body></html>

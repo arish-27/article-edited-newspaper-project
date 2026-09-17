@@ -1,0 +1,2493 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#615e5b", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#7c2d1c", "on-background": "#1d1c14", "tertiary-fixed": "#ffddb6", "secondary-fixed": "#ffdad3", "secondary-fixed-dim": "#ffb4a4", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#643f00", "primary": "#000000", "inverse-surface": "#333028", "inverse-on-surface": "#f6f0e3", "surface-bright": "#fff9ec", "surface-container-high": "#eee8db", "surface-container": "#f3ede0", "on-surface": "#1d1c14", "surface-variant": "#e8e2d5", "on-tertiary-fixed": "#2a1800", "secondary": "#9b4330", "inverse-primary": "#cbc5c2", "outline": "#7d766f", "primary-fixed": "#e7e1de", "surface-dim": "#dfdacd", "background": "#fff9ec", "outline-variant": "#cec5bd", "on-tertiary-container": "#ab7a37", "on-primary-fixed": "#1d1b19", "on-tertiary": "#ffffff", "primary-container": "#1d1b19", "tertiary-fixed-dim": "#f6bc72", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "primary-fixed-dim": "#cbc5c2", "on-secondary-container": "#752717", "on-secondary-fixed": "#3e0500", "tertiary": "#000000", "on-secondary": "#ffffff", "surface-container-low": "#f9f3e6", "on-primary-fixed-variant": "#494644", "on-surface-variant": "#4b4640", "secondary-container": "#fe9078", "surface-container-highest": "#e8e2d5", "surface": "#fff9ec", "on-error": "#ffffff", "tertiary-container": "#2a1800", "on-error-container": "#93000a", "on-primary-container": "#878380" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "margin": "2rem", "margin-mobile": "1rem", "gutter-dense": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-xxl": "4rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-sm": ["Newsreader"], "headline-md": ["Newsreader"], "folio-header": ["Newsreader"], "headline-xl": ["Newsreader"], "quote-pull": ["EB Garamond"], "headline-lg": ["Newsreader"], "display-masthead": ["Newsreader"], "body-italic": ["EB Garamond"], "body-lead": ["EB Garamond"], "display-masthead-mobile": ["Newsreader"], "body-md": ["EB Garamond"], "dateline-meta": ["Courier Prime"], "headline-xl-mobile": ["Newsreader"], "label-caps": ["Courier Prime"] }, "fontSize": { "headline-sm": ["16px", { "lineHeight": "22px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "500" }], "folio-header": ["13px", { "lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "700" }], "headline-xl": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "quote-pull": ["22px", { "lineHeight": "30px", "fontWeight": "500" }], "headline-lg": ["26px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-masthead": ["64px", { "lineHeight": "72px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-italic": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lead": ["19px", { "lineHeight": "28px", "fontWeight": "400" }], "display-masthead-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "0.05em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "dateline-meta": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "400" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "0", "fontWeight": "600" }], "label-caps": ["10px", { "lineHeight": "12px", "letterSpacing": "0.14em", "fontWeight": "700" }] } } } };</script>
+<style id="chronicle-newspaper-fold-styles">
+  /* =========================================================================
+     SILKY-SMOOTH REAL-CONTENT BROADSHEET PAGE TURN (FLIP) SYSTEM - 1.0s
+     - Pure 2-point GPU-accelerated continuous curve (no intermediate steps/hitches)
+     - Hardware layer promotion: transform: translateZ(0) & will-change: transform
+     - Lightweight single-page view cloning (no heavy hidden DOM payloads)
+     - Clean, continuous, fluid broadsheet paper turn
+     ========================================================================= */
+
+  /* Outer Canvas: 100% Full-Bleed Vintage Crumpled Newspaper (NO WHITE BACKGROUND) */
+  /* Natural Broadsheet Scrolling & Vintage Texture */
+  html {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scroll-behavior: smooth;
+  }
+
+  body, body.newspaper-crumpled-theme {
+    background-color: #fff9ec !important;
+    background-image: 
+      linear-gradient(rgba(255, 249, 236, 0.20), rgba(255, 249, 236, 0.20)),
+      url('./stitch_assets/crumpled_newspaper_bg.jpg') !important;
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: repeat-y !important;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important; /* Ensures window scrolls freely */
+  }
+
+  /* Elegant Broadsheet Newspaper Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f4ecdc;
+    border-left: 1px solid rgba(29, 28, 20, 0.15);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #7d766f;
+    border-radius: 2px;
+    border: 2px solid #f4ecdc;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1d1c14;
+  }
+
+  /* 3D Perspective Stage Container (Full-Bleed 100% Width) */
+  #newspaper-stage {
+    perspective: 2800px;
+    perspective-origin: 50% 35%;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+  }
+
+  /* THE SINGLE CONTINUOUS PHYSICAL BROADSHEET NEWSPAPER SHEET (EDGE-TO-EDGE) */
+  #newspaper-broadsheet-sheet {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* Interior editorial cards translucent so crumpled texture is continuous */
+  #newspaper-broadsheet-sheet .bg-surface,
+  #newspaper-broadsheet-sheet main.bg-surface {
+    background-color: transparent !important;
+  }
+
+  #newspaper-broadsheet-sheet .bg-surface-container-lowest {
+    background-color: rgba(255, 255, 255, 0.40) !important;
+    backdrop-filter: blur(0.5px);
+  }
+
+  #newspaper-broadsheet-sheet .bg-surface-container-low {
+    background-color: rgba(249, 243, 230, 0.35) !important;
+    backdrop-filter: blur(0.5px);
+  }
+
+  #newspaper-broadsheet-sheet .bg-surface-container {
+    background-color: rgba(243, 237, 224, 0.38) !important;
+    backdrop-filter: blur(0.5px);
+  }
+
+  #newspaper-broadsheet-sheet .bg-surface-container-high {
+    background-color: rgba(238, 232, 219, 0.45) !important;
+  }
+
+  #newspaper-broadsheet-sheet .bg-surface-container-highest {
+    background-color: rgba(232, 226, 213, 0.50) !important;
+  }
+
+  /* Center Vertical Spine Crease Line */
+  .crease-line-spine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 16px;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 20;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(29, 28, 20, 0.05) 30%, 
+      rgba(29, 28, 20, 0.18) 50%, 
+      rgba(255, 255, 255, 0.30) 54%, 
+      rgba(29, 28, 20, 0.05) 70%, 
+      transparent 100%);
+  }
+
+  /* -------------------------------------------------------------------------
+     SILKY-SMOOTH BROADSHEET SINGLE PAGE TURN RIG OVERLAY (PIXEL-EXACT)
+     ------------------------------------------------------------------------- */
+  .newspaper-single-page-turn-rig {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 95;
+    display: none;
+    perspective: 2800px;
+    perspective-origin: 50% 35%;
+    transform-style: preserve-3d;
+  }
+
+  .newspaper-single-page-turn-rig.turn-active {
+    display: block !important;
+  }
+
+  .page-turn-stage-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 850px;
+    transform-style: preserve-3d;
+  }
+
+  /* Stationary Underlayers underneath the turning leaf */
+  .turn-underlayer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    overflow: hidden !important;
+    border: none !important;
+    background-color: #fff9ec;
+    background-image: 
+      linear-gradient(rgba(255, 249, 236, 0.20), rgba(255, 249, 236, 0.20)),
+      url('./stitch_assets/crumpled_newspaper_bg.jpg');
+    background-size: 100% auto;
+    z-index: 5;
+  }
+
+  .turn-underlayer-left {
+    left: 0;
+  }
+
+  .turn-underlayer-right {
+    left: 50%;
+  }
+
+  /* Dynamic Center Spine Crease Shadow */
+  .page-turn-spine-shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 80px;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.10) 55%, transparent 75%);
+    transition: opacity 0.4s ease;
+  }
+
+  /* The Single Turning Page Leaf with GPU Acceleration */
+  .page-turn-leaf {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+    transform: translateZ(0);
+    z-index: 15;
+  }
+
+  /* Forward Page Turn: Right 50% turns over to Left */
+  .page-turn-leaf.turn-forward {
+    left: 50%;
+    transform-origin: 0% 50%; /* Center spine hinge */
+  }
+
+  /* Backward Page Turn: Left 50% turns over to Right */
+  .page-turn-leaf.turn-backward {
+    left: 0;
+    width: 50%;
+    transform-origin: 100% 50%; /* Center spine hinge */
+  }
+
+  .turn-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+  }
+
+  .turn-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    background-color: #fff9ec;
+    background-image: 
+      linear-gradient(rgba(255, 249, 236, 0.20), rgba(255, 249, 236, 0.20)),
+      url('./stitch_assets/crumpled_newspaper_bg.jpg');
+    background-size: 100% auto;
+    border: none !important; /* CRITICAL: No borders so width is 100% pixel-exact */
+    overflow: hidden !important; /* Clips precisely to the half-page */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+  }
+
+  .turn-face.turn-front {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .turn-face.turn-back {
+    transform: rotateY(180deg) translateZ(0);
+    background-image: 
+      linear-gradient(rgba(255, 249, 236, 0.30), rgba(255, 249, 236, 0.30)),
+      url('./stitch_assets/crumpled_newspaper_bg.jpg');
+    border: none !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Content Viewport containing the 200% wide real broadsheet clone */
+  .turn-content-viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden !important;
+  }
+
+  /* Dynamic Paper Lighting and Crease Gradient Overlays */
+  .turn-lighting-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .turn-lighting-front {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.04) 25%, transparent 60%);
+  }
+
+  .turn-lighting-back {
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.03) 25%, transparent 60%);
+  }
+
+  @keyframes singlePageFlipForward {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-180deg);
+    }
+  }
+
+  @keyframes singlePageFlipBackward {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .anim-single-flip-forward {
+    animation: singlePageFlipForward 1.0s cubic-bezier(0.35, 0.05, 0.20, 1) forwards;
+  }
+
+  .anim-single-flip-backward {
+    animation: singlePageFlipBackward 1.0s cubic-bezier(0.35, 0.05, 0.20, 1) forwards;
+  }
+</style>
+
+</head><body class="newspaper-crumpled-theme font-body-md text-on-surface antialiased m-0 p-0">
+<div class="min-h-screen w-full relative" id="newspaper-stage">
+  <!-- SILKY-SMOOTH CONTINUOUS BROADSHEET SINGLE PAGE TURN RIG OVERLAY - 1.0s -->
+  <div id="newspaper-single-page-turn-rig" class="newspaper-single-page-turn-rig">
+    <div class="page-turn-stage-inner">
+      <!-- Stationary Under-layer: Left Half (0 to 50%) -->
+      <div id="turnUnderLayerLeft" class="turn-underlayer turn-underlayer-left">
+        <div id="turnUnderLeftContent" class="turn-content-viewport"></div>
+      </div>
+
+      <!-- Stationary Under-layer: Right Half (50% to 100%) -->
+      <div id="turnUnderLayerRight" class="turn-underlayer turn-underlayer-right">
+        <div id="turnUnderRightContent" class="turn-content-viewport"></div>
+      </div>
+
+      <div class="page-turn-spine-shadow" id="page-turn-spine-shadow"></div>
+
+      <!-- THE SINGLE TURNING PAGE LEAF WITH REAL CONTENT CLONES -->
+      <div id="page-turn-leaf" class="page-turn-leaf">
+        <div class="turn-card">
+          <!-- Front Face: Cloned Real Content -->
+          <div class="turn-face turn-front" id="turnFaceFront">
+            <div id="turnFrontContent" class="turn-content-viewport"></div>
+            <div class="turn-lighting-overlay turn-lighting-front"></div>
+          </div>
+
+          <!-- Back Face: Cloned Real Content (visible past 90 degrees) -->
+          <div class="turn-face turn-back" id="turnFaceBack">
+            <div id="turnBackContent" class="turn-content-viewport"></div>
+            <div class="turn-lighting-overlay turn-lighting-back"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE SINGLE CONTINUOUS BROADSHEET SHEET (NO GAPS) -->
+  <div id="newspaper-broadsheet-sheet" class="w-full px-4 sm:px-8 md:px-12 pb-8">
+    <!-- Center Broadsheet Vertical Spine Crease -->
+    <div class="crease-line-spine"></div>
+    <header class="w-full pt-4 pb-2 border-b-2 border-primary"><div class="flex flex-wrap items-center justify-between border-b border-outline/40 pb-2 mb-3 text-on-surface-variant font-dateline-meta text-dateline-meta uppercase tracking-wider"><div>SPECIAL INVESTIGATIVE DISPATCH • VOL. 01, NO. 4 • SPECIAL BROADSHEET EDITION</div><div class="flex items-center gap-3">
+  <button id="soundToggleBtn" onclick="togglePaperSound()" type="button" class="inline-flex items-center gap-1.5 px-2.5 py-1 border border-outline/60 bg-surface-container-low text-[10.5px] font-dateline-meta uppercase tracking-wider text-on-surface hover:bg-surface-container-high transition-all active:scale-95 cursor-pointer shadow-xs" title="Toggle tactile paper sound effect">
+    <span id="soundIcon">🔊</span>
+    <span id="soundText">PAPER AUDIO: ON</span>
+  </button>
+  <span>PRICE: TWO ANNAS</span>
+  <img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline" src="./stitch_assets/masthead_profile.jpg"/>
+</div></div><div class="py-4 border-b border-primary/20"><div class="flex flex-col lg:flex-row items-center justify-between gap-4"><div class="hidden lg:block w-[155px] xl:w-[175px] shrink-0 text-left border border-outline p-2 bg-surface-container-low"><p class="font-label-caps text-label-caps uppercase text-secondary font-bold">METROPOLITAN WEATHER</p><p class="font-dateline-meta text-dateline-meta text-on-surface mt-1 leading-snug">CHENNAI 28°C • BLR 24°C • HYD 26°C</p></div><div class="flex-1 text-center min-w-0 px-2"><a href="#page1" onclick="navigateToPage(1); return false;" class="inline-block hover:opacity-90 transition-opacity cursor-pointer"><h1 class="font-display-masthead text-[24px] sm:text-[28px] md:text-[32px] lg:text-[34px] xl:text-[40px] 2xl:text-[46px] leading-tight uppercase text-primary tracking-tight font-black whitespace-nowrap">THE TECHNOLOGY CHRONICLE</h1></a><p class="font-quote-pull text-quote-pull italic text-on-surface-variant mt-1.5 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">An Independent Investigation into Artificial Intelligence, Indian IT &amp; the Urban Economy</p></div><div class="hidden lg:block w-[155px] xl:w-[175px] shrink-0 text-right border border-outline p-2 bg-surface-container-low"><p class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">EDITION DESK</p><p class="font-dateline-meta text-dateline-meta text-on-surface mt-1 leading-snug">THURSDAY, OCTOBER 24, 2026</p></div></div></div><div class="border-t border-b-2 border-primary py-1 mt-2">
+  <nav class="w-full flex flex-wrap items-center justify-center gap-1 sm:gap-1.5 md:gap-2 py-1 px-1 overflow-visible" id="chronicleNav">
+    <button type="button" data-target-page="1" onclick="navigateToPage(1)" class="chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] bg-primary text-on-primary font-bold shadow-sm transition-colors cursor-pointer whitespace-nowrap">PAGE 1: 2026 VS 2030</button>
+    <span class="text-outline/40 text-[9px] select-none shrink-0">•</span>
+    <button type="button" data-target-page="2" onclick="navigateToPage(2)" class="chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap">PAGE 2: CITY RIPPLE</button>
+    <span class="text-outline/40 text-[9px] select-none shrink-0">•</span>
+    <button type="button" data-target-page="3" onclick="navigateToPage(3)" class="chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap">PAGE 3: DATA LEAKS</button>
+    <span class="text-outline/40 text-[9px] select-none shrink-0">•</span>
+    <button type="button" data-target-page="4" onclick="navigateToPage(4)" class="chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap">PAGE 4: JOBS &amp; TRADES</button>
+    <span class="text-outline/40 text-[9px] select-none shrink-0">•</span>
+    <button type="button" data-target-page="5" onclick="navigateToPage(5)" class="chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap">PAGE 5: ADOPTION GRAPH</button>
+    <span class="text-outline/40 text-[9px] select-none shrink-0">•</span>
+    <button type="button" data-target-page="6" onclick="navigateToPage(6)" class="chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap">PAGE 6: THE DIVIDE</button>
+    <span class="text-outline/40 text-[9px] select-none shrink-0">•</span>
+    <button type="button" data-target-page="7" onclick="navigateToPage(7)" class="chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap">PAGE 7: PROS &amp; CONS</button>
+    <span class="text-outline/40 text-[9px] select-none shrink-0">•</span>
+    <button type="button" data-target-page="8" onclick="navigateToPage(8)" class="chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap">PAGE 8: MORAL OF AI</button>
+  </nav>
+</div></header>
+<!-- Floating Broadsheet Fold Indicator Toast -->
+<div id="newspaperFoldToast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300 transform translate-y-2 bg-primary text-on-primary px-5 py-2 border border-outline/60 font-dateline-meta text-dateline-meta uppercase tracking-widest shadow-2xl flex items-center gap-2.5">
+  <span class="w-2 h-2 rounded-full bg-secondary inline-block animate-ping"></span>
+  <span id="foldToastText">FOLDING DISPATCH...</span>
+</div>
+<main class="w-full py-6 bg-transparent min-h-[700px] relative overflow-visible">
+
+  <!-- VIEW 1: THE FRONT PAGE -->
+    <!-- VIEW 1: THE FRONT PAGE (2026 VS 2030 IMPACT) -->
+  <div id="page-view-1" class="newspaper-page-sheet block">
+<div class="flex flex-col w-full text-on-surface font-body-md">
+<!-- OVERHEAD FOLIO BANNER -->
+<div class="w-full flex items-center justify-between py-1 border-b border-primary/40 font-dateline-meta text-dateline-meta uppercase tracking-wider text-on-surface-variant">
+<div>SPECIAL REPORT • SECTION I: THE FRONT DISPATCH</div>
+<div class="hidden sm:block">ARCHIVE REFERENCE: REG-IND-2030-IT</div>
+<div>CHRONICLE BROADSHEET • NO. 4482-B</div>
+</div>
+<!-- MAIN EDITORIAL HEADLINE BLOCK -->
+<div class="py-6 text-center">
+<div class="inline-block px-3 py-0.5 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest mb-3">
+      EXECUTIVE LABOUR &amp; INDUSTRIAL INVESTIGATION
+    </div>
+<h1 class="font-headline-xl text-headline-xl md:text-[50px] md:leading-[54px] uppercase tracking-tight font-black max-w-5xl mx-auto text-primary">
+      FROM KEYSTROKE FACTORIES TO MACHINE PILOTS: HOW AI REWRITES INDIA’S IT RUNWAY (2026 VS 2030)
+    </h1>
+<p class="font-quote-pull text-quote-pull italic text-on-surface-variant max-w-3xl mx-auto mt-3">
+      In 2026, coders treated AI as a faster auto-complete assistant. By 2030, foreign clients refuse to pay for rooms of forty typists when three engineers guiding autonomous agents build the whole project. Here is how India's $250-billion technology corridor is changing.
+    </p>
+<!-- BYLINE & DATELINE STRIP -->
+<div class="mt-4 pt-2 pb-2 border-t border-b border-primary flex flex-wrap items-center justify-between text-left font-dateline-meta text-dateline-meta uppercase tracking-widest text-on-surface-variant">
+<span>BY THE MACROECONOMIC &amp; LABOUR RESEARCH DESK</span>
+<span class="font-bold text-on-surface">DATELINE: CHENNAI OMR • BENGALURU ORR • HYDERABAD HITEC CITY</span>
+</div>
+</div>
+<!-- UPPER FOLD: PHOTO PLATE & SUMMARY PROSE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-6 border-b-2 border-primary">
+<!-- LEFT & CENTER: PHOTO PLATE + INTRO TEXT (8 COLS) -->
+<div class="lg:col-span-8 flex flex-col justify-between">
+<div>
+<!-- FRAME 1PX SOLID BLACK BORDER -->
+<div class="p-1 border border-primary bg-surface-container-lowest">
+<div class="relative border border-outline/40 overflow-hidden">
+<img alt="Indian software engineers walking in Chennai OMR corridor" class="w-full h-auto aspect-[1.79] object-cover grayscale contrast-125 brightness-95" src="./stitch_assets/chennai_omr_fig1.jpg"/>
+</div>
+<div class="p-2 pt-2 pb-1 bg-surface-container-low border-t border-outline/30">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface italic">
+<strong class="font-bold uppercase not-italic text-secondary">FIG. 1 — The Shifting Floor:</strong> Software engineers and tech leads along Chennai's Rajiv Gandhi Salai (OMR). India's IT industry employs 5.42 million direct engineers; today, routine code typing is yielding to system verification and safety design.
+            </p>
+</div>
+</div>
+<!-- 2-COLUMN LEAD PROSE -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4 pt-4 border-t border-outline/30 text-justify">
+<div>
+<p class="font-body-md text-body-md leading-relaxed">
+<span class="float-left text-primary font-display-masthead text-[52px] leading-[44px] pr-2 pt-1 font-bold">F</span>or three decades, the operational physics of the Indian software export economy were governed by a very simple equation: the cost arbitrage of routine human typing. Entire metropolitan corridors—from the dusty fringe of Whitefield to the elevated expressways of Gachibowli—were erected to service this massive need for syntactic labor. In 2026, that foundation experienced its first structural shaking.
+            </p>
+<p class="font-body-md text-body-md leading-relaxed mt-3">
+              Today in 2026, tools like Copilot, Cursor, and Claude are inside every office cubicle. An average programmer can finish a day's boilerplate code before lunch. But global clients are asking a brutal question: "If software writes itself, why should we pay you $45 an hour for human fingers to type it?"
+            </p>
+</div>
+<div>
+<p class="font-body-md text-body-md leading-relaxed">
+              By 2030, the old body-shop model is officially dead. Enterprise buyers across North America and Europe no longer commission vast pyramid squads composed of four hundred junior developers supervised by a dozen managers. The mandate demands lean squads of 5 to 8 architects overseeing autonomous AI agent swarms.
+            </p>
+<p class="font-body-md text-body-md leading-relaxed mt-3">
+              The question confronting Hyderabad, Bengaluru, and Chennai is not whether code will continue to exist, but whether the Indian IT industry can transition from selling cheap typing hours to selling guaranteed, secure, and audited business outcomes.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: BOXED SIDE EDITORIAL PANEL (4 COLS) -->
+<div class="lg:col-span-4 flex flex-col border-t lg:border-t-0 lg:border-l border-primary/40 lg:pl-6">
+<!-- AUDITED CORRIDOR METRICS BOX -->
+<div class="p-3 border-2 border-primary bg-surface-container-low mb-5 relative">
+<div class="border border-outline/40 p-3 bg-surface">
+<div class="border-b-2 border-primary pb-2 mb-3 text-center">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold block">TABULAR INTELLIGENCE</span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-primary font-bold">2026 VS 2030 CORRIDOR METRICS</h2>
+<p class="font-dateline-meta text-[9px] uppercase tracking-wider text-on-surface-variant">[REPORTED &amp; PROJECTED RUNTIME DATA]</p>
+</div>
+<!-- TABLE OF VALUES -->
+<div class="space-y-2.5 font-dateline-meta text-dateline-meta border-b border-outline/30 pb-3">
+<div class="flex items-center justify-between py-1 border-b border-outline/20">
+<span class="text-on-surface-variant uppercase">DIRECT IT WORKFORCE:</span>
+<span class="font-bold text-primary">5.42M <span class="text-[9px] text-secondary font-normal">[REPORTED]</span></span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-outline/20">
+<span class="text-on-surface-variant uppercase">2026 ROUTINE CODE BY AI:</span>
+<span class="font-bold text-primary">35% <span class="text-[9px] text-secondary font-normal">[CURRENT]</span></span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-outline/20">
+<span class="text-on-surface-variant uppercase">2030 ROUTINE CODE BY AI:</span>
+<span class="font-bold text-secondary">82% <span class="text-[9px] text-primary font-normal">[PROJECTED]</span></span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant uppercase">CAMPUS BENCH TIME:</span>
+<span class="font-bold text-secondary">0 MONTHS <span class="text-[9px] text-secondary font-normal">[DOWN FROM 6M]</span></span>
+</div>
+</div>
+<!-- INLINE DATA VISUALIZATION: SYNTAX REDUCTION BAR -->
+<div class="mt-3 pt-2">
+<div class="flex justify-between items-center text-[10px] font-dateline-meta text-on-surface-variant uppercase mb-1">
+<span>AI Code Generation Share (2026 vs 2030)</span>
+<span>82% by 2030</span>
+</div>
+<div class="w-full h-3 border border-primary p-0.5 bg-surface-container-high">
+<div class="h-full bg-primary" style="width: 82%;"></div>
+</div>
+<p class="font-dateline-meta text-[9px] text-on-surface-variant mt-1 leading-tight text-justify">
+              Source: Consolidated field study of Tier-1 global delivery centers across Tamil Nadu, Karnataka &amp; Telangana.
+            </p>
+</div>
+</div>
+</div>
+<!-- PULL QUOTE FRAMED DISPATCH -->
+<div class="p-4 border border-outline bg-surface-container-highest flex-1 flex flex-col justify-center text-center relative">
+<span class="font-display-masthead text-[40px] leading-none text-outline/40 block select-none">“</span>
+<blockquote class="font-quote-pull text-quote-pull italic text-primary leading-snug px-2">
+          In 2026, AI helps the coder type. In 2030, AI types the code, and the human’s only job is making sure the machine didn’t make an expensive mistake.
+        </blockquote>
+<div class="w-12 h-px bg-primary mx-auto my-3"></div>
+<cite class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-on-surface-variant not-italic">
+          — Memorandum of Technical Labour, 2026
+        </cite>
+</div>
+<!-- DISPATCH CLASSIFIED STAMP -->
+<div class="mt-4 p-2 border border-dashed border-outline text-center">
+<p class="font-label-caps text-label-caps uppercase text-secondary font-bold">REGULATORY NOTICE • IMPRIMATUR NO. 74</p>
+<p class="font-dateline-meta text-[10px] text-on-surface mt-0.5">Verified archival report released across all technical engineering institutes.</p>
+</div>
+</div>
+</div>
+<!-- SECONDARY BROADSHEET DISPATCHES (4-COLUMN SPREAD BELOW THE FOLD) -->
+<div class="pt-6">
+<div class="border-b-2 border-primary pb-1 mb-4 flex items-center justify-between font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">
+<span>CORRIDOR CHRONICLE FIELD INVESTIGATIONS</span>
+<span>FOUR SECTOR DISPATCHES • SPECIAL ENLARGED EDITION</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- DISPATCH A -->
+<div class="flex flex-col justify-between border-b md:border-b-0 pb-4 md:pb-0 lg:border-r border-outline/30 lg:pr-5">
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold mb-1">DISPATCH I • FUNCTIONAL SHIFT</div>
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-primary mb-2 leading-tight">
+            WHAT HAPPENED TO THE ROUTINE TYPISTS?
+          </h3>
+<p class="font-body-italic text-body-italic italic text-on-surface-variant mb-2">
+            The collapse of repetitive scaffolding and the rise of the system auditor.
+          </p>
+<div class="w-full h-px bg-outline/20 mb-3"></div>
+<p class="font-body-md text-body-md text-justify leading-relaxed">
+            The traditional software job of manually writing basic web forms, simple database queries, and unit tests is melting away. What took a junior programmer five days in 2022 takes thirty seconds in 2026. The high salaries of 2030 belong to engineers who know how to connect systems, audit security, and catch model mistakes.
+          </p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/20 font-dateline-meta text-[10px] text-on-surface-variant uppercase flex justify-between">
+<span>Automation Exposure:</span>
+<span class="font-bold text-secondary">High [Routine Coding]</span>
+</div>
+</div>
+<!-- DISPATCH B -->
+<div class="flex flex-col justify-between border-b md:border-b-0 pb-4 md:pb-0 lg:border-r border-outline/30 lg:pr-5">
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold mb-1">DISPATCH II • TALENT ACCESSION</div>
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-primary mb-2 leading-tight">
+            WHY FRESHERS FEEL THE PINCH FIRST
+          </h3>
+<p class="font-body-italic text-body-italic italic text-on-surface-variant mb-2">
+            Mass campus hiring gives way to verified portfolios and real-world projects.
+          </p>
+<div class="w-full h-px bg-outline/20 mb-3"></div>
+<p class="font-body-md text-body-md text-justify leading-relaxed">
+            For three decades, colleges ran a conveyor belt directly into enterprise bench pools. When an AI tool does the work once delegated to four junior analysts, the entry door closes sharply. Freshers who rely only on memorized textbook code struggle, while those who build live apps thrive.
+          </p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/20 font-dateline-meta text-[10px] text-on-surface-variant uppercase flex justify-between">
+<span>Campus Intake Impact:</span>
+<span class="font-bold text-secondary">-45% [Bench Reduction]</span>
+</div>
+</div>
+<!-- DISPATCH C -->
+<div class="flex flex-col justify-between border-b md:border-b-0 pb-4 md:pb-0 lg:border-r border-outline/30 lg:pr-5">
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold mb-1">DISPATCH III • GLOBAL BUYERS</div>
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-primary mb-2 leading-tight">
+            WHY FOREIGN CLIENTS REVOLTED
+          </h3>
+<p class="font-body-italic text-body-italic italic text-on-surface-variant mb-2">
+            Western companies refuse to pay per-hour fees for automated boilerplate.
+          </p>
+<div class="w-full h-px bg-outline/20 mb-3"></div>
+<p class="font-body-md text-body-md text-justify leading-relaxed">
+            Procurement teams in New York, London, and Frankfurt have audited their software bills. They will no longer approve contracts that bill $40/hour for junior engineers to copy-paste code. Contracts in 2030 demand fixed pricing tied to uptime, speed, and zero software bugs.
+          </p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/20 font-dateline-meta text-[10px] text-on-surface-variant uppercase flex justify-between">
+<span>Contract Model:</span>
+<span class="font-bold text-primary">Outcome-Based Pricing</span>
+</div>
+</div>
+<!-- DISPATCH D -->
+<div class="flex flex-col justify-between">
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold mb-1">DISPATCH IV • THE SURVIVORS</div>
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-primary mb-2 leading-tight">
+            WHO WINS THE 2030 RACE?
+          </h3>
+<p class="font-body-italic text-body-italic italic text-on-surface-variant mb-2">
+            Domain masters and clear communicators claim the top compensation brackets.
+          </p>
+<div class="w-full h-px bg-outline/20 mb-3"></div>
+<p class="font-body-md text-body-md text-justify leading-relaxed">
+            The engineers who command top salaries in 2030 are not typing machines. They are bridge builders: individuals who understand how a hospital operates, how a supply chain runs, or how a bank avoids fraud, and who can instruct AI agent fleets to build the exact software required.
+          </p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/20 font-dateline-meta text-[10px] text-on-surface-variant uppercase flex justify-between">
+<span>Key Advantage:</span>
+<span class="font-bold text-primary">Domain &amp; System Architecture</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM MECHANICAL SIGN-OFF RULE -->
+<div class="w-full mt-6 pt-2 border-t border-primary flex items-center justify-between font-dateline-meta text-dateline-meta text-on-surface-variant">
+<span>END OF DISPATCH • FRONT BROADSHEET SECTION I</span>
+<a href="#page2" onclick="navigateToPage(2); return false;" class="text-primary font-bold uppercase tracking-widest hover:text-secondary underline transition-colors cursor-pointer">[CONTINUED ON PAGE 2: THE CITY RIPPLE EFFECT →]</a>
+<span class="hidden sm:inline">§ 4482-1944</span>
+</div>
+</div>
+  </div>
+  <!-- VIEW 2: THE CITY RIPPLE EFFECT (CHENNAI, BENGALURU, HYDERABAD) -->
+  <div id="page-view-2" class="newspaper-page-sheet hidden">
+<div class="flex flex-col w-full text-on-surface font-body-md">
+<!-- SECTION FOLIO BANNER -->
+<section class="w-full pb-3 mb-6 border-b-2 border-primary">
+<div class="flex flex-wrap items-center justify-between border-b border-primary/20 pb-2 mb-3">
+<span class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-secondary font-bold">
+        SECTION II: URBAN LABOUR RIPPLES • METROPOLITAN CONTAGION • FOLIO 28
+      </span>
+<span class="font-dateline-meta text-dateline-meta uppercase tracking-wider text-on-surface-variant">
+        DISPATCH FILED: CHENNAI • BENGALURU • HYDERABAD
+      </span>
+</div>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary font-black uppercase tracking-tight text-center max-w-5xl mx-auto py-2">
+      EMPTY PGs, QUIET AUTOS &amp; COLD CHAI: HOW AI AND REMOTE WORK SHAKE SOUTH INDIA'S TECH CITIES
+    </h2>
+<div class="w-full border-t border-b border-primary/30 py-2 mt-1 bg-surface-container-low px-4 text-center">
+<p class="font-quote-pull text-quote-pull italic text-on-surface max-w-4xl mx-auto leading-relaxed">
+        “An IT engineer is not merely a software builder—their monthly paycheck feeds the auto driver, the PG landlord, the lunch mess, and the corner tea stall. When software teams shrink and work from home, the whole city feels the pinch.”
+      </p>
+</div>
+</section>
+
+<!-- CONSUMPTION CASCADE GRAPHIC BOX -->
+<section class="w-full mb-8 p-4 bg-surface-container-low border border-primary relative">
+<div class="absolute -top-3 left-6 bg-surface px-2 border-x border-primary">
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-widest">
+        ARCHIVAL ECONOMIC FLOW • EXCLUSIVE DISPATCH GRAPHIC
+      </span>
+</div>
+<div class="text-center pt-2 pb-4">
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-primary tracking-wide">
+        The Peninsular Consumption Cascade
+      </h3>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase mt-0.5">
+        Tracing how a single software paycheck spreads through South India's urban local economy
+      </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-center">
+<div class="border border-primary p-3 bg-surface flex flex-col justify-between relative shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps font-bold text-secondary uppercase block mb-1">LEVEL I: ORIGINATING ENGINE</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">IT Workforce</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">5.42M Direct Engineers disbursing monthly payrolls across hubs.</p>
+</div>
+<div class="mt-2 text-secondary font-bold font-dateline-meta text-dateline-meta">PAYROLL ENGINE: 1.00 ×</div>
+</div>
+<div class="border border-primary p-3 bg-surface flex flex-col justify-between relative shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps font-bold text-on-surface-variant uppercase block mb-1">LEVEL II: DOMICILE BASE</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">PGs &amp; Rental Houses</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">Bachelor mansions, shared flats, and 10-month rental cash advances.</p>
+</div>
+<div class="mt-2 text-primary font-bold font-dateline-meta text-dateline-meta">↓ ↓ ↓</div>
+</div>
+<div class="border border-primary p-3 bg-surface flex flex-col justify-between relative shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps font-bold text-on-surface-variant uppercase block mb-1">LEVEL III: NUTRITION NET</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">Messes &amp; Tea Stalls</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">Darshinis, Andhra meals, and over 35,000 independent street chai kiosks.</p>
+</div>
+<div class="mt-2 text-primary font-bold font-dateline-meta text-dateline-meta">↓ ↓ ↓</div>
+</div>
+<div class="border border-primary p-3 bg-surface flex flex-col justify-between relative shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps font-bold text-on-surface-variant uppercase block mb-1">LEVEL IV: ARTERIAL TRANSIT</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">Autos, Cabs &amp; Buses</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">Auto stands, app cabs, and private AC corporate bus lines.</p>
+</div>
+<div class="mt-2 text-primary font-bold font-dateline-meta text-dateline-meta">↓ ↓ ↓</div>
+</div>
+<div class="border border-primary p-3 bg-surface flex flex-col justify-between relative shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps font-bold text-on-surface-variant uppercase block mb-1">LEVEL V: LOGISTICS VEINS</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">Quick-Commerce &amp; Food</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">Swiggy, Zomato, Zepto riders, and dark stores in tech suburbs.</p>
+</div>
+<div class="mt-2 text-primary font-bold font-dateline-meta text-dateline-meta">↓ ↓ ↓</div>
+</div>
+<div class="border border-primary p-3 bg-surface flex flex-col justify-between relative shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps font-bold text-on-surface-variant uppercase block mb-1">LEVEL VI: HIGH STREET</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">Salons, Kiranas &amp; Gyms</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">Hair salons, neighborhood grocery shops, tailors, and fitness centers.</p>
+</div>
+<div class="mt-2 text-primary font-bold font-dateline-meta text-dateline-meta">↓ ↓ ↓</div>
+</div>
+<div class="border border-primary p-3 bg-surface flex flex-col justify-between relative shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps font-bold text-on-surface-variant uppercase block mb-1">LEVEL VII: CAPITAL APPARATUS</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">Suburban Real Estate</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">Apartment towers, gated communities, and land promoter investments.</p>
+</div>
+<div class="mt-2 text-primary font-bold font-dateline-meta text-dateline-meta">↓ ↓ ↓</div>
+</div>
+<div class="border-2 border-secondary p-3 bg-surface-container flex flex-col justify-between relative shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps font-bold text-secondary uppercase block mb-1">LEVEL VIII: STATE COFFERS</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">Municipal Exchequer</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">Property stamp duties, commercial power tariffs, and road cess revenue.</p>
+</div>
+<div class="mt-2 text-secondary font-bold font-dateline-meta text-dateline-meta">FINAL SHOCK ABSORBER</div>
+</div>
+</div>
+</section>
+
+<!-- 3 INVESTIGATIVE COLUMNS ON RENT, FOOD, TRANSPORT -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-8 border-b-2 border-primary">
+<!-- COLUMN 1: RENTALS -->
+<div class="lg:col-span-4 border-r-0 lg:border-r border-primary/30 pr-0 lg:pr-6">
+<div class="border-t-2 border-b border-primary py-1 mb-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">COLUMN I • RENTAL HOUSING CRISIS</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold leading-tight uppercase mb-2">
+        The "To-Let" Signs of Navalur &amp; Bellandur
+      </h3>
+<p class="font-body-lead text-body-lead text-on-surface-variant italic mb-3">
+        When hiring slows and developers work from their hometowns, multi-story bachelor hostels face sudden, painful vacancies.
+      </p>
+<div class="border border-primary p-2 bg-surface-container mb-4">
+<span class="font-label-caps text-label-caps font-bold uppercase block text-primary">FIELD METRIC DISPATCH</span>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">
+          AVERAGE TENANT DEPOSIT: Historically pegged at 10 months advance across Bengaluru; shrinking to 2–3 months in Navalur &amp; Gachibowli to attract tenants.
+        </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-3 text-justify">
+<span class="float-left text-primary font-headline-xl text-headline-xl font-bold pr-2 leading-none">F</span>or fifteen years, property owners along Chennai's OMR and Bengaluru's Outer Ring Road took massive bank loans to build 5-story PG hostels. They charged ₹15,000 per sharing bed and demanded huge cash advances.
+      </p>
+<p class="font-body-md text-body-md text-on-surface mb-3 text-justify">
+        With AI automating junior roles and tech companies offering permanent hybrid or remote options, thousands of engineers have packed their bags. They prefer living with family in Trichy, Madurai, or Warangal, saving on rent while working online.
+      </p>
+<p class="font-body-md text-body-md text-on-surface text-justify">
+        Today, "To-Let" placards hang on iron gates month after month. Landlords who expected guaranteed high rental yields are forced to slash rates by 30% to keep their doors open.
+      </p>
+</div>
+
+<!-- COLUMN 2: FOOD & MESSES -->
+<div class="lg:col-span-4 border-r-0 lg:border-r border-primary/30 pr-0 lg:pr-6">
+<div class="border-t-2 border-b border-primary py-1 mb-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">COLUMN II • CATERING &amp; MESS DISPATCH</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold leading-tight uppercase mb-2">
+        Cold Tea Stalls &amp; The Empty Lunch Mess
+      </h3>
+<p class="font-body-lead text-body-lead text-on-surface-variant italic mb-3">
+        The mid-day rush that sustained thousands of small food joints splinters into quiet streets and home cooking.
+      </p>
+<div class="border border-primary p-2 bg-surface-container mb-4">
+<span class="font-label-caps text-label-caps font-bold uppercase block text-primary">CHAI &amp; FOOD ESTIMATE</span>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">
+          DAILY CORRIDOR CONSUMPTION: Over 35,000 tea stalls across the three cities report a 40% reduction in daily evening cup counts as campus footfalls drop.
+        </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-3 text-justify">
+<span class="float-left text-primary font-headline-xl text-headline-xl font-bold pr-2 leading-none">A</span>t 4:00 PM, outside any major tech park, the roadside tea stall was once an ocean of young professionals chatting over ginger tea, cigarettes, and hot onion samosas.
+      </p>
+<p class="font-body-md text-body-md text-on-surface mb-3 text-justify">
+        Behind that tea vendor stood a whole supply chain: milk delivery vans, lemon suppliers, bakery biscuit distributors, and local vegetable markets. When employees work from home three days a week, that daily cash circulation evaporates.
+      </p>
+<p class="font-body-md text-body-md text-on-surface text-justify">
+        Small Andhra lunch messes and Darshini tiffin centers in Madhapur and Marathahalli that once prepared hundreds of daily meals are cooking half their usual quantities to avoid throwing away unsold food.
+      </p>
+</div>
+
+<!-- COLUMN 3: TRANSPORT & AUTOS -->
+<div class="lg:col-span-4">
+<div class="border-t-2 border-b border-primary py-1 mb-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">COLUMN III • MOBILITY &amp; VEHICLE EMIs</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold leading-tight uppercase mb-2">
+        Unpaid EMIs on Auto Rickshaws and Cabs
+      </h3>
+<p class="font-body-lead text-body-lead text-on-surface-variant italic mb-3">
+        Drivers who took private loans to buy vehicles to ferry IT commuters face soaring fuel costs and dwindling passenger queues.
+      </p>
+<div class="border border-primary p-2 bg-surface-container mb-4">
+<span class="font-label-caps text-label-caps font-bold uppercase block text-primary">TRANSIT DISPATCH</span>
+<p class="font-dateline-meta text-dateline-meta text-on-surface mt-1">
+          FLEET CONSOLIDATION: Major IT delivery centers have trimmed dedicated AC bus lines by 55%, pushing contracted transport fleets into distress sales.
+        </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-3 text-justify">
+<span class="float-left text-primary font-headline-xl text-headline-xl font-bold pr-2 leading-none">T</span>housands of young men from rural districts moved to the city, obtained commercial licenses, and bought cars on monthly loans of ₹14,000 to drive for tech corridors and cab apps.
+      </p>
+<p class="font-body-md text-body-md text-on-surface mb-3 text-justify">
+        With software teams automated and employees commuting fewer days, drivers wait hours at metro stations and tech park gates for a single booking. After paying petrol and app commissions, many take home less than ₹400 a day.
+      </p>
+<p class="font-body-md text-body-md text-on-surface text-justify">
+        Auto drivers who charged premium fares between Sholinganallur and Tidel Park are now negotiating lower rates, proving that when the tech engine slows down, the humblest driver pays the price.
+      </p>
+</div>
+</div>
+
+<!-- TRI-CITY METROPOLITAN COMPARISON SPREAD -->
+<div class="pt-6">
+<div class="border-b-2 border-primary pb-1 mb-4 flex items-center justify-between font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">
+<span>METROPOLITAN RESILIENCE INDEX • CHENNAI VS BENGALURU VS HYDERABAD</span>
+<span>SPECIAL TRI-CITY FIELD SURVEY</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-4 border border-outline/40 bg-surface-container-low flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase">METROPOLIS 01</span>
+<h4 class="font-headline-md text-headline-md uppercase font-bold text-primary mt-1 mb-2">BENGALURU: THE HYPER-CONCENTRATED EPICENTER</h4>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+Bengaluru remains India’s startup capital, but its heavy reliance on IT makes it vulnerable. The Outer Ring Road faces severe rental corrections. However, top venture capital and deep-tech AI startups keep its core vibrant even as routine coding jobs disappear.
+</p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>Vulnerability Level:</span>
+<span class="font-bold text-secondary">High Exposure / High Innovation</span>
+</div>
+</div>
+
+<div class="p-4 border border-outline/40 bg-surface flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary font-bold uppercase">METROPOLIS 02</span>
+<h4 class="font-headline-md text-headline-md uppercase font-bold text-primary mt-1 mb-2">HYDERABAD: THE GLOSSY TOWERS MUST ADAPT</h4>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+With massive, sprawling office parks built along Gachibowli and the Outer Ring Road, Hyderabad faces huge physical floor space overhang. City planners are rapidly converting vacant corporate floors into biotech labs, healthcare centers, and educational spaces.
+</p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>Vulnerability Level:</span>
+<span class="font-bold text-primary">Moderate Commercial Overhang</span>
+</div>
+</div>
+
+<div class="p-4 border border-outline/40 bg-surface-container-high/60 flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase">METROPOLIS 03</span>
+<h4 class="font-headline-md text-headline-md uppercase font-bold text-primary mt-1 mb-2">CHENNAI: THE DEFENSIVE INDUSTRIAL FORTRESS</h4>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+Chennai holds the strongest economic shield in South India. While its OMR tech corridor cools down, its massive automobile factories in Sriperumbudur, medical tourism hospitals, and busy seaports keep the broader city economy resilient and steady.
+</p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>Vulnerability Level:</span>
+<span class="font-bold text-primary">Superior Balanced Defense</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- BOTTOM SIGN-OFF RULE -->
+<div class="w-full mt-6 pt-2 border-t border-primary flex items-center justify-between font-dateline-meta text-dateline-meta text-on-surface-variant">
+<span>END OF DISPATCH • SECTION II: THE CITY RIPPLE EFFECT</span>
+<a href="#page3" onclick="navigateToPage(3); return false;" class="text-primary font-bold uppercase tracking-widest hover:text-secondary underline transition-colors cursor-pointer">[CONTINUED ON PAGE 3: CYBER BREACHES &amp; DATA LEAKS →]</a>
+<span class="hidden sm:inline">§ 4482-1944</span>
+</div>
+</div>
+  </div>
+  <!-- VIEW 3: CYBER BREACHES & DATA LEAKS -->
+  <div id="page-view-3" class="newspaper-page-sheet hidden">
+<div class="flex flex-col w-full text-on-surface font-body-md">
+<!-- FOLIO BANNER -->
+<div class="w-full flex items-center justify-between py-1 border-b-2 border-primary mb-3">
+<span class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-primary font-bold">SECTION III: THE SHADOW LEDGER • CYBER SECURITY &amp; MASS DATA LEAKS • FOLIO 34</span>
+<span class="font-dateline-meta text-dateline-meta uppercase text-secondary font-bold">DISPATCH ARCHIVE N° 712-S • METROPOLITAN CRIME DESK</span>
+</div>
+
+<!-- HEADLINE & DECK -->
+<div class="w-full text-center pb-4 mb-4 border-b border-outline/40">
+<p class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-widest mb-1">SPECIAL CYBER INVESTIGATION</p>
+<h2 class="font-headline-xl text-headline-xl uppercase text-primary tracking-tight font-black max-w-5xl mx-auto">
+      WHEN THE MACHINE TURNS THIEF: HOW AI CRACKS CITIZEN VAULTS AND BILLIONAIRE BOARDROOMS
+    </h2>
+<div class="w-16 h-0.5 bg-primary mx-auto my-2"></div>
+<p class="font-quote-pull text-quote-pull italic text-on-surface-variant max-w-3xl mx-auto">
+      Hacking once required a team of human computer geniuses working for weeks. Today, automated AI algorithms test millions of digital locks every second. Why your grandmother’s pension and the CEO’s private memos are leaking onto the same dark web.
+    </p>
+<div class="mt-2 flex items-center justify-center gap-6 font-dateline-meta text-dateline-meta text-on-surface-variant uppercase">
+<span>FILED BY THE DIGITAL FORENSICS &amp; CRIME DESK</span>
+<span>•</span>
+<span>SECURITY AUDIT NO. 902-B</span>
+<span>•</span>
+<span>UNRESTRICTED CITIZEN RELEASE</span>
+</div>
+</div>
+
+<!-- UPPER FOLD: PHOTO PLATE & LEAD INVESTIGATION -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-6 border-b-2 border-primary">
+<div class="lg:col-span-7 flex flex-col justify-between">
+<div class="p-1 border border-primary bg-surface-container-lowest">
+<div class="relative border border-outline/40 overflow-hidden">
+<img alt="Archival depiction of breached digital server vaults and network data streams" class="w-full h-auto aspect-[1.79] object-cover grayscale contrast-125 brightness-95" src="./images/fig3.jpg"/>
+</div>
+<div class="p-2 pt-2 pb-1 bg-surface-container-low border-t border-outline/30">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface italic">
+<strong class="font-bold uppercase not-italic text-secondary">FIG. 3 — The Breached Network:</strong> Automated neural network probes intercepting encrypted database streams. In 2026, cyber breaches are no longer manual—autonomous hacking swarms operate continuously without human fatigue.
+</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline/30 text-justify">
+<p class="font-body-md text-body-md leading-relaxed">
+<span class="float-left text-primary font-display-masthead text-[48px] leading-[40px] pr-2 pt-1 font-bold">A</span> generation ago, computer crime was a boutique craft. A skilled hacker targeted a specific bank, broke through a firewall, and walked away with a digital prize. In 2026, artificial intelligence has industrialized digital theft into an automated, mass-production assembly line.
+</p>
+<p class="font-body-md text-body-md leading-relaxed mt-2">
+Autonomous software agents now scan thousands of corporate databases, cloud storage servers, and municipal registries every minute of the night. The moment a software update leaves a tiny digital window cracked open, an AI bot slips in, copies every citizen's record, and leaves without setting off a single human alarm.
+</p>
+</div>
+</div>
+
+<!-- SIDE TABLE: THE TWO VAST LEAK VECTORS -->
+<div class="lg:col-span-5 flex flex-col border-t lg:border-t-0 lg:border-l border-primary/40 lg:pl-6">
+<div class="p-3 border-2 border-primary bg-surface-container-low mb-4">
+<div class="border-b-2 border-primary pb-2 mb-3 text-center">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold block">SECURITY COMPARISON</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary font-bold">THE TWO FACES OF DATA EXPOSURE</h3>
+<p class="font-dateline-meta text-[9px] uppercase tracking-wider text-on-surface-variant">[HOW DIFFERENT CLASSES SUFFER LEAKS]</p>
+</div>
+<div class="space-y-3 font-body-md text-body-md text-on-surface">
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">1. Ordinary Citizens &amp; Middle-Class Families</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Aadhaar numbers, phone contacts, personal photos, and bank OTPs leaked on Telegram. Scammers use AI voice clones of their children to extort emergency cash.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">2. High-Profile VIPs &amp; Industrial Tycoons</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Boardroom audio leaked before stock earnings, private diagnostic hospital health records stolen, and multi-million-dollar AI deepfake wire transfers.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">3. National Infrastructure &amp; Municipal Data</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Power grid switches, hospital diagnostic queues, and municipal property records vulnerable to automated state-sponsored cyber warfare.</p>
+</div>
+</div>
+</div>
+
+<div class="p-3 border border-outline bg-surface-container-highest text-center">
+<blockquote class="font-quote-pull text-quote-pull italic text-primary leading-snug">
+“In the old days, you locked your front door. In the AI era, your front door is made of glass, and the lock checks itself into the cloud.”
+</blockquote>
+<cite class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-on-surface-variant block mt-2">
+— NATIONAL CYBER SECURITY DEFENSE ADVISORY
+</cite>
+</div>
+</div>
+</div>
+
+<!-- 4 DETAILED DISPATCHES ON REAL-WORLD SECURITY THREATS -->
+<div class="pt-6">
+<div class="border-b-2 border-primary pb-1 mb-4 flex items-center justify-between font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">
+<span>FOUR DISPATCHES ON THE NEW CYBER BATTLEFIELD</span>
+<span>CRITICAL CITIZEN BRIEFING • READ &amp; PRESERVE</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- DISPATCH 1 -->
+<div class="flex flex-col justify-between border-b md:border-b-0 pb-4 md:pb-0 lg:border-r border-outline/30 lg:pr-5">
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold mb-1">DISPATCH I • PHISHING</div>
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-primary mb-2 leading-tight">
+            NO MORE SPELLING MISTAKES
+          </h3>
+<p class="font-body-italic text-body-italic italic text-on-surface-variant mb-2">
+            AI crafts flawless scam messages in native regional languages.
+          </p>
+<div class="w-full h-px bg-outline/20 mb-3"></div>
+<p class="font-body-md text-body-md text-justify leading-relaxed">
+            Previously, people could spot a fraud message because of broken English, weird symbols, or obvious grammar errors. Today, AI models generate polite, official-sounding SMS and WhatsApp notices in perfect Tamil, Hindi, or Telugu, convincing even cautious retired teachers to click deceptive bank links.
+          </p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/20 font-dateline-meta text-[10px] text-on-surface-variant uppercase flex justify-between">
+<span>Threat Level:</span>
+<span class="font-bold text-secondary">Extreme / Mass Population</span>
+</div>
+</div>
+
+<!-- DISPATCH 2 -->
+<div class="flex flex-col justify-between border-b md:border-b-0 pb-4 md:pb-0 lg:border-r border-outline/30 lg:pr-5">
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold mb-1">DISPATCH II • VOICE CLONES</div>
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-primary mb-2 leading-tight">
+            THE STOLEN CHILD VOICE
+          </h3>
+<p class="font-body-italic text-body-italic italic text-on-surface-variant mb-2">
+            Five seconds of video audio is enough to replicate any human voice.
+          </p>
+<div class="w-full h-px bg-outline/20 mb-3"></div>
+<p class="font-body-md text-body-md text-justify leading-relaxed">
+            Scammers take a 5-second voice clip from a public Instagram video and feed it into an AI voice generator. They call parents, sounding exactly like their crying son or daughter claiming to be arrested by police or trapped in a hospital, demanding an immediate UPI transfer of ₹50,000.
+          </p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/20 font-dateline-meta text-[10px] text-on-surface-variant uppercase flex justify-between">
+<span>Deception Index:</span>
+<span class="font-bold text-secondary">98% Auditory Match</span>
+</div>
+</div>
+
+<!-- DISPATCH 3 -->
+<div class="flex flex-col justify-between border-b md:border-b-0 pb-4 md:pb-0 lg:border-r border-outline/30 lg:pr-5">
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold mb-1">DISPATCH III • CORPORATE VAULTS</div>
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-primary mb-2 leading-tight">
+            THE BOARDROOM INFILTRATORS
+          </h3>
+<p class="font-body-italic text-body-italic italic text-on-surface-variant mb-2">
+            When executives fall victim to deepfake video conference calls.
+          </p>
+<div class="w-full h-px bg-outline/20 mb-3"></div>
+<p class="font-body-md text-body-md text-justify leading-relaxed">
+            In major financial centers, finance managers have joined Zoom video calls where every participant—including the Chief Financial Officer—was an AI deepfake avatar. The manager transferred $25 million overseas before realizing not a single real human was in the virtual conference room.
+          </p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/20 font-dateline-meta text-[10px] text-on-surface-variant uppercase flex justify-between">
+<span>Corporate Loss:</span>
+<span class="font-bold text-primary">Multi-Million Escrow Theft</span>
+</div>
+</div>
+
+<!-- DISPATCH 4 -->
+<div class="flex flex-col justify-between">
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold mb-1">DISPATCH IV • CITIZEN SHIELD</div>
+<h3 class="font-headline-md text-headline-md uppercase font-bold text-primary mb-2 leading-tight">
+            FOUR GOLDEN DEFENSE RULES
+          </h3>
+<p class="font-body-italic text-body-italic italic text-on-surface-variant mb-2">
+            How common families can protect their data in the age of AI.
+          </p>
+<div class="w-full h-px bg-outline/20 mb-3"></div>
+<p class="font-body-md text-body-md text-justify leading-relaxed">
+            First: Establish a secret family "safeword" that a real family member must speak during emergencies. Second: Never trust incoming bank calls; hang up and dial the official bank branch. Third: Lock your Aadhaar biometrics on the official portal. Fourth: Never post voice clips on public social media.
+          </p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/20 font-dateline-meta text-[10px] text-on-surface-variant uppercase flex justify-between">
+<span>Preparedness:</span>
+<span class="font-bold text-primary">Essential Family Protocol</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- BOTTOM SIGN-OFF RULE -->
+<div class="w-full mt-6 pt-2 border-t border-primary flex items-center justify-between font-dateline-meta text-dateline-meta text-on-surface-variant">
+<span>END OF DISPATCH • SECTION III: CYBER BREACHES &amp; DATA LEAKS</span>
+<a href="#page4" onclick="navigateToPage(4); return false;" class="text-primary font-bold uppercase tracking-widest hover:text-secondary underline transition-colors cursor-pointer">[CONTINUED ON PAGE 4: JOBS BOOM, BUST &amp; CRAFT TRADES →]</a>
+<span class="hidden sm:inline">§ 4482-1944</span>
+</div>
+</div>
+  </div>
+  <!-- VIEW 4: JOBS BOOM, BUST & PHYSICAL CRAFT TRADES -->
+  <div id="page-view-4" class="newspaper-page-sheet hidden">
+<div class="flex flex-col w-full text-on-surface font-body-md">
+<!-- SECTION FOLIO HEADER -->
+<div class="w-full flex items-center justify-between py-1 border-b-2 border-primary mb-3">
+<span class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-primary font-bold">SECTION IV: WORKFORCE TAXONOMY &amp; OCCUPATIONAL BALANCE SHEET • FOLIO 46</span>
+<span class="font-dateline-meta text-dateline-meta uppercase text-secondary font-bold">LABOUR DESK SPECIAL INVESTIGATION • CHRONICLE PRESS</span>
+</div>
+
+<!-- HEADLINE & DECK -->
+<div class="w-full text-center pb-4 mb-4 border-b border-outline/40">
+<p class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-widest mb-1">OCCUPATIONAL CENSUS 2026–2030</p>
+<h2 class="font-headline-xl text-headline-xl uppercase text-primary tracking-tight font-black max-w-5xl mx-auto">
+      SCREENS CAN BLUR, BUT WRENCHES DON’T LIE: WHY AI CRUSHES DESK TYPISTS BUT CAN’T TOUCH THE LOCAL MECHANIC
+    </h2>
+<div class="w-16 h-0.5 bg-primary mx-auto my-2"></div>
+<p class="font-quote-pull text-quote-pull italic text-on-surface-variant max-w-3xl mx-auto">
+      An algorithm can synthesize twenty thousand lines of code in five seconds. But it cannot crawl beneath a car to loosen a rusted bolt, climb a ladder to fix a burnt transformer, or brew a steaming glass of ginger tea on a rainy morning.
+    </p>
+<div class="mt-2 flex items-center justify-center gap-6 font-dateline-meta text-dateline-meta text-on-surface-variant uppercase">
+<span>AUDITED LABOUR SURVEY</span>
+<span>•</span>
+<span>DISPATCH ARCHIVE N° 884-K</span>
+<span>•</span>
+<span>SOUTHERN GUILD REGISTER</span>
+</div>
+</div>
+
+<!-- THREE-COLUMN SPECTRUM: DOWNGRADED IT, UPGRADED IT, UNTOUCHABLE PHYSICAL TRADES -->
+<div class="w-full mb-6">
+<div class="flex items-center justify-between border-y border-primary py-1 mb-3 bg-surface-container-low px-2">
+<span class="font-folio-header text-folio-header uppercase tracking-wider text-primary">TABLEAU I: THE TRI-PARTITE LABOUR SPECTRUM</span>
+<span class="font-dateline-meta text-dateline-meta text-on-surface-variant uppercase">MEASURED ACROSS BOTH SCREEN AND REAL-WORLD TRADES</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-primary">
+<!-- COLUMN 1: IT ROLES ON THE DECLINE -->
+<div class="p-4 border-b md:border-b-0 md:border-r border-primary bg-surface flex flex-col justify-between">
+<div>
+<div class="border-b-2 border-primary pb-2 mb-3">
+<span class="font-label-caps text-label-caps uppercase font-bold text-secondary block">TIER 01 • SCREEN ROLES</span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary font-bold">IT ROLES IN SHARP DECLINE</h3>
+<p class="font-dateline-meta text-dateline-meta text-secondary font-bold mt-0.5">[ 65% – 85% AUTOMATED ]</p>
+</div>
+<div class="mb-4 bg-surface-container-high p-2 border border-outline/40">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface uppercase font-bold">REPETITIVE SYNTAX • LOW JUDGMENT</p>
+<p class="font-body-italic text-body-italic text-on-surface-variant mt-1">
+Tasks bound by predictable patterns and copy-paste templates that AI models execute without fatigue.
+</p>
+</div>
+<div class="space-y-3 font-body-md text-body-md">
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">01. Manual QA &amp; Regression Testers</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Automated testing agents click through thousands of test flows in seconds.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">02. Routine Boilerplate &amp; CRUD Coders</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Simple website building, basic forms, and copy-paste API writing are now 100% automated.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">03. Level-1 Helpdesk &amp; Chat Support</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Intelligent voice bots answer customer queries and reset passwords instantly.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">04. Basic Data Entry &amp; Doc Formatters</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Extracting text from invoices and generating simple tables requires zero humans.</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 flex items-center justify-between text-dateline-meta font-dateline-meta">
+<span class="uppercase">Hiring Trajectory:</span>
+<span class="font-bold text-secondary">SHARP DECLINE</span>
+</div>
+</div>
+
+<!-- COLUMN 2: IT ROLES SOARING -->
+<div class="p-4 border-b md:border-b-0 md:border-r border-primary bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="border-b-2 border-primary pb-2 mb-3">
+<span class="font-label-caps text-label-caps uppercase font-bold text-primary block">TIER 02 • HIGH-TECH VANGUARD</span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary font-bold">IT ROLES SOARING IN VALUE</h3>
+<p class="font-dateline-meta text-dateline-meta text-primary font-bold mt-0.5">[ +120% SALARY PREMIUM ]</p>
+</div>
+<div class="mb-4 bg-surface p-2 border border-outline/40">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface uppercase font-bold">SYSTEM ARCHITECTURE • AUDIT &amp; SAFETY</p>
+<p class="font-body-italic text-body-italic text-on-surface-variant mt-1">
+High-judgment engineering where an error causes massive financial or regulatory disaster.
+</p>
+</div>
+<div class="space-y-3 font-body-md text-body-md">
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">01. AI Reliability &amp; Safety Auditors</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Specialists who test models for hallucinations, bias, and legal compliance before launch.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">02. Cloud &amp; Hardware Infrastructure</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Data centers, fiber cables, cooling towers, and GPU servers need real human engineering.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">03. Domain Architects &amp; Translators</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Engineers who understand complex hospital, banking, or logistics logic and direct AI agents.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">04. Cyber Incident Commanders</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Rapid response humans who take charge when automated systems suffer zero-day attacks.</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 flex items-center justify-between text-dateline-meta font-dateline-meta">
+<span class="uppercase">Hiring Trajectory:</span>
+<span class="font-bold text-primary">RAPID EXPANSION</span>
+</div>
+</div>
+
+<!-- COLUMN 3: UNTOUCHABLE REAL-WORLD PHYSICAL TRADES -->
+<div class="p-4 bg-surface-container-high/60 flex flex-col justify-between">
+<div>
+<div class="border-b-2 border-primary pb-2 mb-3">
+<span class="font-label-caps text-label-caps uppercase font-bold text-secondary block">TIER 03 • PHYSICAL TRADES</span>
+<h3 class="font-headline-md text-headline-md uppercase text-primary font-bold">THE UNTOUCHABLE CRAFT TRADES</h3>
+<p class="font-dateline-meta text-dateline-meta text-primary font-bold mt-0.5">[ 100% IMMUNE TO AI ]</p>
+</div>
+<div class="mb-4 bg-surface p-2 border border-outline/40">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface uppercase font-bold">TACTILE MASTERY • REAL-WORLD WORK</p>
+<p class="font-body-italic text-body-italic text-on-surface-variant mt-1">
+Jobs requiring biological hands, physical balance, real-world tools, and sensory intuition.
+</p>
+</div>
+<div class="space-y-3 font-body-md text-body-md">
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">01. Two-Wheeler &amp; Car Mechanics</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Diagnosing an engine knock, replacing brake shoes, or tuning an EV scooter needs real hands.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">02. Electricians &amp; Plumbers</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Reaching inside a damp ceiling to fix a burning junction box will never be done by a chatbot.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">03. Tea Kadai &amp; Breakfast Masters</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">The morning ritual of steaming filter coffee, hot vadai, and street banter is sacred and irreplaceable.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">04. Carpenters, Welders &amp; Masons</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Custom wood carving, iron gate fabrication, and physical brick construction remain strictly human.</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 flex items-center justify-between text-dateline-meta font-dateline-meta">
+<span class="uppercase">Economic Security:</span>
+<span class="font-bold text-primary">PERMANENT DEFENSE</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- THE GREAT WAGE RE-ALIGNMENT ESSAY SPREAD -->
+<div class="border border-primary p-4 md:p-6 mb-8 bg-surface-container-low">
+<div class="border-b-2 border-primary pb-2 mb-4 flex flex-col md:flex-row md:items-end justify-between">
+<div>
+<span class="font-label-caps text-label-caps font-bold uppercase tracking-widest text-secondary">ARCHIVAL ESSAY • ECONOMIC RE-ALIGNMENT</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-primary font-bold">THE REVENGE OF THE REAL WORLD: WHY TRADESMEN WIN</h3>
+</div>
+<p class="font-dateline-meta text-dateline-meta uppercase text-on-surface-variant mt-1 md:mt-0">HISTORIC CAREER RE-EVALUATION</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-justify">
+<div>
+<p class="font-body-md text-body-md leading-relaxed">
+<span class="float-left text-primary font-headline-xl text-headline-xl font-bold pr-2 leading-none">F</span>or thirty years, middle-class Indian parents operated under an ironclad cultural rule: get your child an engineering degree, buy them a laptop, and secure a desk job inside an air-conditioned glass tower. Physical labor—such as fixing pipes, repairing motorcycle clutches, or running a workshop—was viewed as inferior.
+</p>
+<p class="font-body-md text-body-md leading-relaxed mt-3">
+The rise of artificial intelligence has turned that snobbery on its head. Software sitting on a computer screen is infinitely duplicable at zero marginal cost. An AI model can produce forty web applications before you finish drinking your coffee. But an AI model cannot tighten a single leaking screw on a bathroom tap.
+</p>
+</div>
+<div>
+<p class="font-body-md text-body-md leading-relaxed">
+Today in cities like Chennai and Bangalore, a reliable electrician, an experienced car mechanic, or a master carpenter earns more cash per day than an entry-level software tester stuck in a cubicle. They own their tools, they work on their own schedule, and they have zero fear that a Silicon Valley software update will make their hands obsolete tomorrow.
+</p>
+<p class="font-body-md text-body-md leading-relaxed mt-3">
+The lesson of 2030 is clear: the future belongs to two groups—those who command the master architecture of machine minds, and those whose skilled hands shape the physical, tangible world we live in.
+</p>
+</div>
+</div>
+</div>
+
+<!-- BOTTOM SIGN-OFF RULE -->
+<div class="w-full mt-6 pt-2 border-t border-primary flex items-center justify-between font-dateline-meta text-dateline-meta text-on-surface-variant">
+<span>END OF DISPATCH • SECTION IV: JOBS &amp; CRAFT TRADES</span>
+<a href="#page5" onclick="navigateToPage(5); return false;" class="text-primary font-bold uppercase tracking-widest hover:text-secondary underline transition-colors cursor-pointer">[CONTINUED ON PAGE 5: 2026–2030 ADOPTION GRAPH →]</a>
+<span class="hidden sm:inline">§ 4482-1944</span>
+</div>
+</div>
+  </div>
+  <!-- VIEW 5: 2026-2030 ADOPTION GRAPH & PREDICTIONS -->
+  <div id="page-view-5" class="newspaper-page-sheet hidden">
+<div class="flex flex-col w-full text-on-surface font-body-md">
+<!-- FOLIO BANNER -->
+<div class="w-full border-b border-primary pb-1 mb-4 flex items-center justify-between">
+<span class="font-folio-header text-folio-header uppercase tracking-[0.2em] text-primary">
+      SECTION V: EMPIRICAL FORECAST • 2026–2030 AI ADOPTION ROADMAP • FOLIO 58
+    </span>
+<span class="font-dateline-meta text-dateline-meta uppercase tracking-wider text-on-surface-variant">
+      DATA JOURNALISM DESK • DISPATCH NO. 104
+    </span>
+</div>
+
+<!-- MASTHEAD & DECK -->
+<div class="text-center py-4 border-b-2 border-primary border-t-2">
+<p class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold mb-1">
+      SPECIAL BROADSHEET TREATISE ON THE SUB-CONTINENT'S COGNITIVE CAPITAL
+    </p>
+<h2 class="font-headline-xl text-headline-xl uppercase text-primary font-black tracking-tight max-w-5xl mx-auto leading-none">
+      THE FIVE-YEAR WAVE: MAPPING AI ADOPTION FROM 2026 PILOTS TO 2030 REALITY
+    </h2>
+<div class="my-3 flex items-center justify-center gap-3">
+<span class="h-[1px] w-16 bg-primary"></span>
+<span class="font-headline-sm text-headline-sm text-primary">§</span>
+<span class="h-[1px] w-16 bg-primary"></span>
+</div>
+<p class="font-quote-pull text-quote-pull italic text-on-surface max-w-3xl mx-auto px-4">
+      “We moved past marketing hype to measure actual enterprise integration: year-by-year projections of how artificial intelligence moves from an experimental novelty into the foundational concrete of Indian business.”
+    </p>
+</div>
+
+<!-- NEWSPAPER DATA JOURNALISM VISUALIZATIONS (3 WOODCUT SVGS) -->
+<div class="border-t-2 border-b-2 border-primary py-6 my-4">
+<div class="text-center mb-6">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-widest">
+        ENGRAVED STATISTICAL INDICATORS
+      </span>
+<h3 class="font-headline-xl text-headline-xl uppercase text-primary font-black">
+        DATA JOURNALISM: THE 2026–2030 ADOPTION DISPATCHES
+      </h3>
+<p class="font-dateline-meta text-dateline-meta uppercase text-on-surface-variant">
+        COMPILED VIA NATIONAL INDUSTRY REGISTRIES &amp; CHRONICLE COMPUTATIONAL DESK
+      </p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- GRAPH 01: ADOPTION TRAJECTORY -->
+<div class="border border-outline/50 p-4 bg-surface flex flex-col justify-between">
+<div>
+<div class="border-b border-primary pb-2 mb-3">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">[SCENARIO MODEL]</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold mt-0.5">
+GRAPH I: AI ADOPTION TRAJECTORY (2026 → 2030)
+</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Share of routine code written autonomously (%)</p>
+</div>
+<!-- Woodcut Style Line/Bar Chart -->
+<div class="py-2">
+<svg class="w-full h-auto text-primary" fill="none" stroke="currentColor" viewbox="0 0 320 180">
+<!-- Grid lines -->
+<line opacity="0.3" stroke-dasharray="2,2" stroke-width="0.5" x1="30" x2="300" y1="20" y2="20"></line>
+<line opacity="0.3" stroke-dasharray="2,2" stroke-width="0.5" x1="30" x2="300" y1="60" y2="60"></line>
+<line opacity="0.3" stroke-dasharray="2,2" stroke-width="0.5" x1="30" x2="300" y1="100" y2="100"></line>
+<line stroke-width="1" x1="30" x2="300" y1="140" y2="140"></line>
+<line stroke-width="1" x1="30" x2="30" y1="20" y2="140"></line>
+<!-- Axis labels -->
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="end" x="25" y="143">0%</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="end" x="25" y="103">25%</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="end" x="25" y="63">50%</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="end" x="25" y="23">75%</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="9" text-anchor="middle" x="65" y="155">'26</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="9" text-anchor="middle" x="120" y="155">'27</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="9" text-anchor="middle" x="175" y="155">'28</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="9" text-anchor="middle" x="230" y="155">'29</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="9" text-anchor="middle" x="285" y="155">'30</text>
+<!-- Consensus Curve -->
+<path d="M65,115 Q175,85 285,38" stroke="currentColor" stroke-width="2.5"></path>
+<!-- Sudden Curve -->
+<path d="M65,115 Q150,70 285,24" stroke="currentColor" stroke-dasharray="3,2" stroke-width="1.5"></path>
+<!-- Points -->
+<circle cx="65" cy="115" fill="currentColor" r="3"></circle>
+<circle cx="120" cy="98" fill="currentColor" r="3"></circle>
+<circle cx="175" cy="76" fill="currentColor" r="3"></circle>
+<circle cx="230" cy="54" fill="currentColor" r="3"></circle>
+<circle cx="285" cy="38" fill="currentColor" r="4"></circle>
+</svg>
+</div>
+<div class="font-dateline-meta text-dateline-meta space-y-1 text-on-surface border-t border-outline/30 pt-2 mt-2">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1"><span class="inline-block w-3 h-0.5 bg-primary"></span> Consensus Adoption</span>
+<span class="font-bold">84% by 2030</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="inline-block w-3 h-0.5 border-t border-dashed border-primary"></span> Rapid Takeover</span>
+<span>92% by 2030</span>
+</div>
+</div>
+</div>
+<p class="font-body-italic text-body-italic text-on-surface-variant text-xs mt-3">
+Fig. 1 — Annual progression: 2026 (28%) → 2027 (42%) → 2028 (58%) → 2029 (71%) → 2030 (84%).
+</p>
+</div>
+
+<!-- GRAPH 02: ROLE EXPOSURE BARS -->
+<div class="border border-outline/50 p-4 bg-surface flex flex-col justify-between">
+<div>
+<div class="border-b border-primary pb-2 mb-3">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">[SECTOR INDEX]</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold mt-0.5">
+GRAPH II: AI AUTOMATION BY TASK DOMAIN
+</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Degree of task substitutability</p>
+</div>
+<!-- Horizontal Bar Metric -->
+<div class="space-y-2.5 py-2">
+<div>
+<div class="flex justify-between font-dateline-meta text-dateline-meta mb-0.5">
+<span class="font-bold">Customer Support &amp; Chat</span>
+<span>88% AUTOMATED</span>
+</div>
+<div class="w-full bg-surface-dim h-3.5 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 88%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-dateline-meta text-dateline-meta mb-0.5">
+<span class="font-bold">Manual QA &amp; Regression Code</span>
+<span>82% AUTOMATED</span>
+</div>
+<div class="w-full bg-surface-dim h-3.5 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 82%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-dateline-meta text-dateline-meta mb-0.5">
+<span class="font-bold">Banking Back-Office Processing</span>
+<span>72% AUTOMATED</span>
+</div>
+<div class="w-full bg-surface-dim h-3.5 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 72%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-dateline-meta text-dateline-meta mb-0.5">
+<span class="font-bold">Diagnostic Medical Imaging</span>
+<span>58% AUTOMATED</span>
+</div>
+<div class="w-full bg-surface-dim h-3.5 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 58%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-dateline-meta text-dateline-meta mb-0.5">
+<span class="font-bold">Automotive Assembly &amp; Robots</span>
+<span>44% AUTOMATED</span>
+</div>
+<div class="w-full bg-surface-dim h-3.5 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 44%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-dateline-meta text-dateline-meta mb-0.5">
+<span class="font-bold">Plumbing, Carpentry &amp; Trade</span>
+<span>12% AUTOMATED</span>
+</div>
+<div class="w-full bg-surface-dim h-3.5 border border-primary p-0.5">
+<div class="h-full bg-primary" style="width: 12%;"></div>
+</div>
+</div>
+</div>
+</div>
+<p class="font-body-italic text-body-italic text-on-surface-variant text-xs mt-3">
+Fig. 2 — Digital information tasks face overwhelming automation, while physical craft trades stay protected.
+</p>
+</div>
+
+<!-- GRAPH 03: CAMPUS FRESHER INTAKE -->
+<div class="border border-outline/50 p-4 bg-surface flex flex-col justify-between">
+<div>
+<div class="border-b border-primary pb-2 mb-3">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">[CAMPUS METRIC]</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary font-bold mt-0.5">
+GRAPH III: CAMPUS FRESHER INTAKE SHIFT
+</h4>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Annual recruitment thousands per batch</p>
+</div>
+<!-- Bar Visual -->
+<div class="py-2">
+<svg class="w-full h-auto text-primary" fill="none" stroke="currentColor" viewbox="0 0 320 180">
+<line stroke-width="1" x1="30" x2="300" y1="140" y2="140"></line>
+<line stroke-width="1" x1="30" x2="30" y1="20" y2="140"></line>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="end" x="25" y="143">0k</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="end" x="25" y="103">150k</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="end" x="25" y="63">300k</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="end" x="25" y="23">450k</text>
+<!-- 2022 Peak -->
+<rect fill="currentColor" height="105" opacity="0.9" width="28" x="55" y="35"></rect>
+<text fill="currentColor" font-family="Courier Prime" font-size="9" text-anchor="middle" x="69" y="155">2022</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="middle" x="69" y="30">420k</text>
+<!-- 2026 Present -->
+<rect fill="currentColor" height="58" opacity="0.6" width="28" x="145" y="82"></rect>
+<text fill="currentColor" font-family="Courier Prime" font-size="9" text-anchor="middle" x="159" y="155">2026</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="middle" x="159" y="77">220k</text>
+<!-- 2030 Projected -->
+<rect fill="currentColor" height="34" opacity="0.4" width="28" x="235" y="106"></rect>
+<text fill="currentColor" font-family="Courier Prime" font-size="9" text-anchor="middle" x="249" y="155">2030</text>
+<text fill="currentColor" font-family="Courier Prime" font-size="8" text-anchor="middle" x="249" y="101">130k</text>
+</svg>
+</div>
+<div class="font-dateline-meta text-dateline-meta space-y-1 text-on-surface border-t border-outline/30 pt-2 mt-2">
+<div class="flex items-center justify-between">
+<span>2022 Hiring Peak:</span>
+<span class="font-bold">420,000 Grads</span>
+</div>
+<div class="flex items-center justify-between">
+<span>2026 Current Level:</span>
+<span class="font-bold text-secondary">220,000 Grads</span>
+</div>
+<div class="flex items-center justify-between">
+<span>2030 Projected Lean:</span>
+<span class="font-bold text-primary">130,000 Grads</span>
+</div>
+</div>
+</div>
+<p class="font-body-italic text-body-italic text-on-surface-variant text-xs mt-3">
+Fig. 3 — Pure headcount bulk recruiting drops sharply, shifting to highly tested specialists.
+</p>
+</div>
+</div>
+</div>
+
+<!-- FIVE YEAR YEAR-BY-YEAR DETAILED ROADMAP TABLE -->
+<div class="border border-primary p-4 md:p-6 mb-8 bg-surface-container-low">
+<div class="border-b-2 border-primary pb-2 mb-4 flex flex-col md:flex-row md:items-end justify-between">
+<div>
+<span class="font-label-caps text-label-caps font-bold uppercase tracking-widest text-secondary">THE CHRONOLOGICAL REGISTER</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-primary font-bold">YEAR-BY-YEAR AI ADOPTION ROADMAP (2026 → 2030)</h3>
+</div>
+<p class="font-dateline-meta text-dateline-meta uppercase text-on-surface-variant mt-1 md:mt-0">PROJECTED OPERATIONAL MILESTONES</p>
+</div>
+
+<div class="space-y-4 font-body-md text-body-md">
+<div class="p-3 bg-surface border border-outline/40">
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-headline-md text-headline-md font-bold uppercase text-primary">2026: THE ASSISTANT PILOT ERA (28% ADOPTION)</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-dim px-2 py-0.5 font-bold">AI AS CO-PILOT</span>
+</div>
+<p class="text-on-surface text-justify leading-relaxed">
+Developers in Indian IT parks use AI as a faster auto-complete. Code is written 35% faster, but companies still bill clients using traditional headcounts. Freshers face slower hiring, but existing staff keep their desks while management explores automated pilot programs.
+</p>
+</div>
+
+<div class="p-3 bg-surface border border-outline/40">
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-headline-md text-headline-md font-bold uppercase text-primary">2027: THE AUTONOMOUS AGENT SHIFT (42% ADOPTION)</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-dim px-2 py-0.5 font-bold">MULTI-AGENT SQUADS</span>
+</div>
+<p class="text-on-surface text-justify leading-relaxed">
+Autonomous AI agents move beyond suggestions to build, test, and deploy entire small software modules overnight. Manual QA testing teams shrink rapidly as automated test suites run continuous self-healing code checks without human intervention.
+</p>
+</div>
+
+<div class="p-3 bg-surface border border-outline/40">
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-headline-md text-headline-md font-bold uppercase text-primary">2028: THE LEGACY CODE RE-WRITE (58% ADOPTION)</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-dim px-2 py-0.5 font-bold">BANKING MODERNIZATION</span>
+</div>
+<p class="text-on-surface text-justify leading-relaxed">
+Global banks, airlines, and insurance providers use AI models to modernize 25-year-old COBOL and Java systems in three months rather than five-year consulting contracts. The traditional IT "maintenance contract" revenue stream contracts by 40%.
+</p>
+</div>
+
+<div class="p-3 bg-surface border border-outline/40">
+<div class="flex items-center justify-between border-b border-outline/30 pb-1 mb-2">
+<span class="font-headline-md text-headline-md font-bold uppercase text-primary">2029: VOICE &amp; MULTIMODAL UBIQUITY (71% ADOPTION)</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-dim px-2 py-0.5 font-bold">NATURAL LANGUAGE CODE</span>
+</div>
+<p class="text-on-surface text-justify leading-relaxed">
+Writing syntax becomes obsolete. Business analysts, doctors, and store managers build internal applications simply by speaking in plain conversational Tamil, Hindi, or English. Software creation becomes as universal as sending a text message.
+</p>
+</div>
+
+<div class="p-3 bg-surface-container border-2 border-primary">
+<div class="flex items-center justify-between border-b-2 border-primary pb-1 mb-2">
+<span class="font-headline-md text-headline-md font-bold uppercase text-primary">2030: THE LEAN SOVEREIGN EQUILIBRIUM (84% ADOPTION)</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary text-on-primary px-2 py-0.5 font-bold">SYSTEM AUDITORS &amp; TRADES</span>
+</div>
+<p class="text-on-surface text-justify leading-relaxed">
+A 5-person engineering firm routinely launches platforms that once required 100 people. Pure typists find zero market demand. High wages concentrate exclusively among system-level architects, cybersecurity commanders, and physical real-world trade craftsmen.
+</p>
+</div>
+</div>
+</div>
+
+<!-- BOTTOM SIGN-OFF RULE -->
+<div class="w-full mt-6 pt-2 border-t border-primary flex items-center justify-between font-dateline-meta text-dateline-meta text-on-surface-variant">
+<span>END OF DISPATCH • SECTION V: 2026–2030 ADOPTION GRAPH</span>
+<a href="#page6" onclick="navigateToPage(6); return false;" class="text-primary font-bold uppercase tracking-widest hover:text-secondary underline transition-colors cursor-pointer">[CONTINUED ON PAGE 6: THE DIGITAL &amp; LITERACY DIVIDE →]</a>
+<span class="hidden sm:inline">§ 4482-1944</span>
+</div>
+</div>
+  </div>
+  <!-- VIEW 6: THE DIGITAL & LITERACY DIVIDE -->
+  <div id="page-view-6" class="newspaper-page-sheet hidden">
+<div class="flex flex-col w-full text-on-surface font-body-md">
+<!-- SECTION FOLIO BANNER -->
+<div class="w-full flex items-center justify-between py-1 border-b-2 border-primary mb-3">
+<span class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-primary font-bold">SECTION VI: SOCIAL STRATIFICATION • THE THREE TIERS OF THE ALGORITHMIC AGE • FOLIO 68</span>
+<span class="font-dateline-meta text-dateline-meta uppercase text-secondary font-bold">FIELD LABOUR DISPATCH • PENINSULAR DEMOGRAPHIC SURVEY</span>
+</div>
+
+<!-- HEADLINE & DECK -->
+<div class="w-full text-center pb-4 mb-4 border-b border-outline/40">
+<p class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-widest mb-1">SOCIOLOGICAL INVESTIGATION</p>
+<h2 class="font-headline-xl text-headline-xl uppercase text-primary tracking-tight font-black max-w-5xl mx-auto">
+      THE GREAT KNOWLEDGE DIVIDE: HOW AI SHAKES THE UNEDUCATED, PUNISHES THE RIGID, AND CROWNS THE CURIOUS
+    </h2>
+<div class="w-16 h-0.5 bg-primary mx-auto my-2"></div>
+<p class="font-quote-pull text-quote-pull italic text-on-surface-variant max-w-3xl mx-auto">
+      Will a street vendor who cannot read be crushed by AI, or will voice technology give him unexpected superpowers? What happens to the educated office worker who refuses to touch modern tools? A look at who wins, who stumbles, and who gets left behind.
+    </p>
+<div class="mt-2 flex items-center justify-center gap-6 font-dateline-meta text-dateline-meta text-on-surface-variant uppercase">
+<span>SOCIO-ECONOMIC RESEARCH DESK</span>
+<span>•</span>
+<span>SURVEY REF: DIV-2030-IND</span>
+<span>•</span>
+<span>PUBLIC INTEREST REGISTER</span>
+</div>
+</div>
+
+<!-- UPPER FOLD: PHOTO PLATE + INTRO PROSE -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-6 border-b-2 border-primary">
+<div class="lg:col-span-7 flex flex-col justify-between">
+<div class="p-1 border border-primary bg-surface-container-lowest">
+<div class="relative border border-outline/40 overflow-hidden">
+<img alt="A street vendor speaking into a smartphone in an urban bazaar alongside a modern glass corporate corridor" class="w-full h-auto aspect-[1.79] object-cover grayscale contrast-125 brightness-95" src="./images/fig4.jpg"/>
+</div>
+<div class="p-2 pt-2 pb-1 bg-surface-container-low border-t border-outline/30">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface italic">
+<strong class="font-bold uppercase not-italic text-secondary">FIG. 6 — The Dual Reality:</strong> A vegetable vendor using voice-activated regional AI on a 5G handset in Koyambedu market, while white-collar office desks face automated restructuring.
+</p>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline/30 text-justify">
+<p class="font-body-md text-body-md leading-relaxed">
+<span class="float-left text-primary font-display-masthead text-[48px] leading-[40px] pr-2 pt-1 font-bold">W</span>hen people discuss artificial intelligence, they usually assume the rich and educated will win, while the uneducated will lose. The reality of 2026 is far more surprising and unpredictable.
+</p>
+<p class="font-body-md text-body-md leading-relaxed mt-2">
+The technological divide is no longer about who went to college—it is about who learns to interact with intelligent machines. In many ways, voice-enabled AI is liberating people who cannot read or write, while ruthlessly replacing comfortable desk workers who refuse to adapt their habits.
+</p>
+</div>
+</div>
+
+<!-- SIDE SCORECARD BOX -->
+<div class="lg:col-span-5 flex flex-col border-t lg:border-t-0 lg:border-l border-primary/40 lg:pl-6">
+<div class="p-3 border-2 border-primary bg-surface-container-low mb-4">
+<div class="border-b-2 border-primary pb-2 mb-3 text-center">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold block">SOCIO-ECONOMIC IMPACT SCORECARD</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-primary font-bold">WHO GAINS VS WHO GETS CRUSHED</h3>
+<p class="font-dateline-meta text-[9px] uppercase tracking-wider text-on-surface-variant">[THE NEW THREE-CLASS SOCIETY]</p>
+</div>
+<div class="space-y-3 font-body-md text-body-md text-on-surface">
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">1. The Uneducated / Blue-Collar</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Loses basic clerical stepping stones, but gains massive empowerment through spoken voice-AI assistants in regional mother tongues.</p>
+</div>
+<div class="border-l-2 border-secondary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">2. The Educated "AI-Illiterate"</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">The most vulnerable segment: white-collar desk workers doing routine spreadsheets, paperwork, and writing who refuse to adapt.</p>
+</div>
+<div class="border-l-2 border-primary pl-2">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">3. The AI-Empowered Super-User</p>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant">Huge winners: A single person using AI tools to run entire businesses, design apps, write contracts, and achieve 10x earning leverage.</p>
+</div>
+</div>
+</div>
+
+<div class="p-3 border border-outline bg-surface-container-highest text-center">
+<blockquote class="font-quote-pull text-quote-pull italic text-primary leading-snug">
+“AI will not replace humans. But humans who master AI will completely replace the humans who refuse to learn it.”
+</blockquote>
+<cite class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-on-surface-variant block mt-2">
+— GUILD SOCIOLOGICAL OBSERVATORY
+</cite>
+</div>
+</div>
+</div>
+
+<!-- 3 IN-DEPTH COLUMNS EXPLORING THE THREE TIERS -->
+<div class="pt-6">
+<div class="border-b-2 border-primary pb-1 mb-4 flex items-center justify-between font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">
+<span>IN-DEPTH ANALYSIS OF THE THREE WORKER TIERS</span>
+<span>CRITICAL SOCIO-ECONOMIC FIELDWORK</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- COLUMN 1 -->
+<div class="p-4 border border-outline/40 bg-surface flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase">TIER 01 • THE UNEDUCATED WORKER</span>
+<h4 class="font-headline-md text-headline-md uppercase font-bold text-primary mt-1 mb-2">A SURPRISING VOICE PARADOX</h4>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+On one hand, basic clerical stepping stones—like typing pool clerk or manual data entry—are gone, shutting an old entry route for poor families. But on the other hand, voice-enabled AI in Tamil, Hindi, and Telugu allows an illiterate farmer or fruit vendor to speak directly into a phone and get instant wholesale market prices, fertilizer advice, and government welfare funds without having to pay a corrupt middleman.
+</p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>Impact Factor:</span>
+<span class="font-bold text-primary">Voice-Liberated / Physical Safety</span>
+</div>
+</div>
+
+<!-- COLUMN 2 -->
+<div class="p-4 border border-outline/40 bg-surface-container-high/40 flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase">TIER 02 • THE EDUCATED NON-ADAPTER</span>
+<h4 class="font-headline-md text-headline-md uppercase font-bold text-primary mt-1 mb-2">THE MOST DANGEROUS POSITION</h4>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+This is the most endangered class in modern India: the university graduate who took a white-collar desk job in banking, accounting, or corporate paperwork and proudly says, "I don't use AI." They do not lose their job to a robot—they lose it to a 23-year-old junior colleague who uses AI to finish three days of invoice reconciliation before lunchtime.
+</p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>Impact Factor:</span>
+<span class="font-bold text-secondary">High Displacement Risk</span>
+</div>
+</div>
+
+<!-- COLUMN 3 -->
+<div class="p-4 border-2 border-primary bg-surface-container flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary font-bold uppercase">TIER 03 • THE AI SUPER-USER</span>
+<h4 class="font-headline-md text-headline-md uppercase font-bold text-primary mt-1 mb-2">THE 10X POWER MULTIPLIER</h4>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+Whether a 20-year-old student or a 55-year-old small businessman, whoever learns to orchestrate AI prompts, check errors, and connect tools gains unfair commercial leverage. A single individual can write software, design a brand logo, draft customer legal contracts, and market a product worldwide from their bedroom without hiring a large agency.
+</p>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 font-dateline-meta text-dateline-meta text-on-surface-variant flex justify-between">
+<span>Impact Factor:</span>
+<span class="font-bold text-primary">Maximum Economic Leverage</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- BOTTOM SIGN-OFF RULE -->
+<div class="w-full mt-6 pt-2 border-t border-primary flex items-center justify-between font-dateline-meta text-dateline-meta text-on-surface-variant">
+<span>END OF DISPATCH • SECTION VI: THE DIGITAL &amp; LITERACY DIVIDE</span>
+<a href="#page7" onclick="navigateToPage(7); return false;" class="text-primary font-bold uppercase tracking-widest hover:text-secondary underline transition-colors cursor-pointer">[CONTINUED ON PAGE 7: THE PROS &amp; CONS LEDGER →]</a>
+<span class="hidden sm:inline">§ 4482-1944</span>
+</div>
+</div>
+  </div>
+  <!-- VIEW 7: AI ADVANTAGES & DISADVANTAGES -->
+  <div id="page-view-7" class="newspaper-page-sheet hidden">
+<div class="flex flex-col w-full text-on-surface font-body-md">
+<!-- FOLIO BANNER -->
+<div class="w-full flex items-center justify-between py-1 border-b-2 border-primary mb-3">
+<span class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-primary font-bold">SECTION VII: CRITICAL AUDIT • THE DOUBLE-EDGED BLADE • FOLIO 74</span>
+<span class="font-dateline-meta text-dateline-meta uppercase text-secondary font-bold">INDEPENDENT EDITORIAL ASSESSMENT • SPECIAL SPREAD</span>
+</div>
+
+<!-- HEADLINE & DECK -->
+<div class="w-full text-center pb-4 mb-4 border-b border-outline/40">
+<p class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-widest mb-1">THE TWO-SIDED BALANCE SHEET</p>
+<h2 class="font-headline-xl text-headline-xl uppercase text-primary tracking-tight font-black max-w-5xl mx-auto">
+      THE BLESSING AND THE BURDEN: AN HONEST LEDGER OF WHAT AI GIVES US—AND WHAT IT TAKES AWAY
+    </h2>
+<div class="w-16 h-0.5 bg-primary mx-auto my-2"></div>
+<p class="font-quote-pull text-quote-pull italic text-on-surface-variant max-w-3xl mx-auto">
+      Cutting through corporate marketing hype and doomsday horror movies. A clear, side-by-side examination of artificial intelligence’s genuine gifts against its most dangerous consequences for human society.
+    </p>
+<div class="mt-2 flex items-center justify-center gap-6 font-dateline-meta text-dateline-meta text-on-surface-variant uppercase">
+<span>AUDITED BY THE EDITORIAL BOARD</span>
+<span>•</span>
+<span>LEDGER REF: ADV-DIS-2030</span>
+<span>•</span>
+<span>BALANCED PRESS RECORD</span>
+</div>
+</div>
+
+<!-- PHOTO PLATE FIG 7 -->
+<div class="mb-6 p-1 border border-primary bg-surface-container-lowest">
+<div class="relative border border-outline/40 overflow-hidden">
+<img alt="Archival photograph of engineers and modern machine interfaces in an IT campus" class="w-full h-56 object-cover grayscale contrast-125 brightness-95" src="./stitch_assets/bengaluru_floor_fig2.jpg"/>
+</div>
+<div class="p-2 pt-2 pb-1 bg-surface-container-low border-t border-outline/30">
+<p class="font-dateline-meta text-dateline-meta leading-tight text-on-surface italic">
+<strong class="font-bold uppercase not-italic text-secondary">FIG. 7 — The Industrial Crossroads:</strong> Systems engineers evaluating automated machine outputs in an enterprise delivery center. Every breakthrough in productivity brings equal questions of employment, truth, and human purpose.
+</p>
+</div>
+</div>
+
+<!-- THE TWO GREAT SIDE-BY-SIDE LEDGERS -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<!-- LEFT LEDGER: 5 GENUINE BLESSINGS -->
+<div class="p-5 border-2 border-primary bg-surface flex flex-col justify-between">
+<div>
+<div class="border-b-2 border-primary pb-2 mb-4 text-center bg-surface-container-low p-2">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-bold block">COLUMN A • THE BRIGHT SIDE</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-primary font-bold">FIVE GENUINE BLESSINGS OF AI</h3>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant mt-0.5">[UNQUESTIONED ADVANTAGES]</p>
+</div>
+
+<div class="space-y-4 font-body-md text-body-md text-on-surface text-justify">
+<div class="border-l-2 border-primary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">01. Medical Miracles &amp; Early Disease Detection</p>
+<p class="mt-1 leading-relaxed">
+AI analyzes thousands of CT scans and retinal photos in seconds, detecting early signs of cancer, blindness, or heart disease years before symptoms show. In drug discovery, algorithms design life-saving antibiotic molecules in weeks rather than fifteen years.
+</p>
+</div>
+
+<div class="border-l-2 border-primary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">02. A Patient Tutor for Every Rural Child</p>
+<p class="mt-1 leading-relaxed">
+Every student in an underprivileged village can now have a personal, never-tiring teacher in their pocket that explains algebra, physics, or history in their native mother tongue at their own learning pace without judgment.
+</p>
+</div>
+
+<div class="border-l-2 border-primary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">03. The Death of Soul-Crushing Drudgery</p>
+<p class="mt-1 leading-relaxed">
+Eliminating millions of hours of mindless human suffering spent filing boring government forms, sorting repetitive tax invoices, and organizing medical claims, freeing human minds for creative and empathetic work.
+</p>
+</div>
+
+<div class="border-l-2 border-primary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">04. Solving Grand Climate &amp; Food Crises</p>
+<p class="mt-1 leading-relaxed">
+Optimizing city electric grids to reduce carbon emissions, predicting sudden flood surges hours in advance, and helping farmers use 30% less water and pesticide while increasing wheat and paddy yields.
+</p>
+</div>
+
+<div class="border-l-2 border-primary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-primary font-bold">05. Supercharging the Solo Creator</p>
+<p class="mt-1 leading-relaxed">
+A small inventor, teacher, or filmmaker with zero capital can produce animated movies, code a smartphone app, or publish an illustrated book that previously required a $50-million corporate studio.
+</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 font-dateline-meta text-dateline-meta text-primary font-bold text-center">
+TOTAL EVALUATION: EXPONENTIAL HUMAN MULTIPLIER
+</div>
+</div>
+
+<!-- RIGHT LEDGER: 5 SEVERE BURDENS -->
+<div class="p-5 border-2 border-secondary bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="border-b-2 border-secondary pb-2 mb-4 text-center bg-surface p-2 border">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold block">COLUMN B • THE DARK SHADOW</span>
+<h3 class="font-headline-lg text-headline-lg uppercase text-secondary font-bold">FIVE SEVERE BURDENS OF AI</h3>
+<p class="font-dateline-meta text-dateline-meta text-on-surface-variant mt-0.5">[UNINTENDED DISASTERS]</p>
+</div>
+
+<div class="space-y-4 font-body-md text-body-md text-on-surface text-justify">
+<div class="border-l-2 border-secondary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-secondary font-bold">01. Sudden Job Destruction &amp; Middle-Class Anxiety</p>
+<p class="mt-1 leading-relaxed">
+Career pathways that sustained families for generations—junior programming, accounting, basic legal research, copywriting—are evaporating before school and college systems can retrain millions of anxious graduates.
+</p>
+</div>
+
+<div class="border-l-2 border-secondary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-secondary font-bold">02. The Death of Digital Truth &amp; Deepfakes</p>
+<p class="mt-1 leading-relaxed">
+Photorealistic deepfake videos, fake celebrity speeches, and cloned voice scams are destroying social trust. People can no longer believe video evidence or phone calls, poisoning elections and family safety.
+</p>
+</div>
+
+<div class="border-l-2 border-secondary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-secondary font-bold">03. Human Cognitive Atrophy &amp; Lazy Thinking</p>
+<p class="mt-1 leading-relaxed">
+When algorithms write our letters, summarize our books, and calculate our arguments, the human brain’s critical thinking and memory muscles wither from disuse, creating a generation dependent on machine prompts.
+</p>
+</div>
+
+<div class="border-l-2 border-secondary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-secondary font-bold">04. Astronomical Thirst for Electricity &amp; Water</p>
+<p class="mt-1 leading-relaxed">
+Training and running massive AI clusters consumes electricity equivalent to whole cities, and millions of liters of clean water are evaporated daily just to cool computer chips while global warming accelerates.
+</p>
+</div>
+
+<div class="border-l-2 border-secondary pl-3">
+<p class="font-headline-sm text-headline-sm uppercase text-secondary font-bold">05. Encoded Prejudice &amp; Algorithmic Injustice</p>
+<p class="mt-1 leading-relaxed">
+When AI models are trained on historical human data, they repeat historical discrimination—quietly rejecting bank loans, college admissions, and job applications against minority and underprivileged communities.
+</p>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-outline/30 font-dateline-meta text-dateline-meta text-secondary font-bold text-center">
+TOTAL EVALUATION: MASSIVE CIVILIZATIONAL RISK
+</div>
+</div>
+</div>
+
+<!-- EDITORIAL SUMMARY VERDICT BOX -->
+<div class="p-4 border-2 border-primary bg-surface-container text-center mb-4">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest block mb-1">
+EDITORIAL SYNTHESIS • THE VERDICT
+</span>
+<p class="font-quote-pull text-quote-pull italic text-primary max-w-4xl mx-auto leading-relaxed">
+“AI is neither a savior to worship nor a monster to destroy. It is a giant magnifying mirror held up to the human soul. Whatever wisdom, greed, love, or malice we feed into it, the machine reflects back at ten times the speed.”
+</p>
+</div>
+
+<!-- BOTTOM SIGN-OFF RULE -->
+<div class="w-full mt-6 pt-2 border-t border-primary flex items-center justify-between font-dateline-meta text-dateline-meta text-on-surface-variant">
+<span>END OF DISPATCH • SECTION VII: THE PROS &amp; CONS LEDGER</span>
+<a href="#page8" onclick="navigateToPage(8); return false;" class="text-primary font-bold uppercase tracking-widest hover:text-secondary underline transition-colors cursor-pointer">[CONTINUED ON PAGE 8: THE MORAL OF ARTIFICIAL MIND →]</a>
+<span class="hidden sm:inline">§ 4482-1944</span>
+</div>
+</div>
+  </div>
+  <!-- VIEW 8: THE MORAL OF AI -->
+  <div id="page-view-8" class="newspaper-page-sheet hidden">
+<div class="flex flex-col w-full text-on-surface font-body-md">
+<!-- SECTION FOLIO BANNER -->
+<div class="w-full flex items-center justify-between py-1 border-b-2 border-primary mb-3">
+<span class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-primary font-bold">SECTION VIII: CONCLUDING MANIFESTO • PHILOSOPHY, ETHICS &amp; THE HUMAN PATH • FOLIO 80</span>
+<span class="font-dateline-meta text-dateline-meta uppercase text-secondary font-bold">THE CHRONICLE IMPRIMATUR • HISTORIC SPECIAL RELEASE</span>
+</div>
+
+<!-- HEADLINE & DECK -->
+<div class="w-full text-center pb-6 mb-6 border-b-2 border-primary">
+<div class="inline-block px-3 py-0.5 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest mb-3">
+FINAL EDITORIAL MANIFESTO
+</div>
+<h2 class="font-headline-xl text-headline-xl md:text-[50px] md:leading-[54px] uppercase text-primary font-black tracking-tight max-w-5xl mx-auto">
+THE MORAL OF THE MACHINE: WHAT REMAINS SACRED WHEN CODE CAN THINK?
+</h2>
+<div class="w-20 h-1 bg-primary mx-auto my-3"></div>
+<p class="font-quote-pull text-quote-pull italic text-on-surface-variant max-w-4xl mx-auto leading-relaxed">
+As algorithms master logic, calculation, and syntax, they hand humanity a profound mirror. The ultimate lesson of the AI revolution is not technical—it is deeply, stubbornly, and beautifully human.
+</p>
+<div class="mt-3 flex items-center justify-center gap-6 font-dateline-meta text-dateline-meta text-on-surface-variant uppercase">
+<span>WRITTEN BY THE SENIOR EDITORIAL COUNCIL</span>
+<span>•</span>
+<span>BROADSHEET IMPRIMATUR NO. 4482-B</span>
+<span>•</span>
+<span>FINAL OCTOBER 2026 DISPATCH</span>
+</div>
+</div>
+
+<!-- FIVE MONUMENTAL MORAL TRUTHS -->
+<div class="space-y-6 mb-8">
+<!-- TRUTH 1 -->
+<div class="p-5 bg-surface border-2 border-primary">
+<div class="flex items-center justify-between border-b border-primary pb-2 mb-3">
+<span class="font-headline-md text-headline-md font-bold uppercase text-primary">TRUTH I • INFORMATION IS NOT WISDOM</span>
+<span class="font-label-caps text-label-caps uppercase bg-primary text-on-primary px-2 py-0.5 font-bold">SOUL VS SYNTAX</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+A computer algorithm can recite every medical textbook written in human history, cite every pharmaceutical trial, and cross-reference ten million symptoms in a millisecond. But it cannot sit by a hospital bed at 3:00 AM, look into a daughter's crying eyes, and hold her hand with genuine empathy. Never confuse the rapid retrieval of data with the presence of a human conscience. Knowledge is knowing what a machine said; wisdom is knowing whether a human should obey it.
+</p>
+</div>
+
+<!-- TRUTH 2 -->
+<div class="p-5 bg-surface-container-low border border-outline/50">
+<div class="flex items-center justify-between border-b border-primary pb-2 mb-3">
+<span class="font-headline-md text-headline-md font-bold uppercase text-primary">TRUTH II • STOP TRAINING CHILDREN TO BE CHEAP ROBOTS</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-dim px-2 py-0.5 font-bold text-on-surface">EDUCATIONAL REFORM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+For fifty years, our school examination halls rewarded students who could sit in complete silence, memorize textbook definitions, and regurgitate formulas on command. We were training children to behave like crude calculators. Now that real calculators have arrived in the form of neural networks, that rote training is obsolete. We must finally teach what makes humans irreplaceable: artistic imagination, kindness, original storytelling, moral bravery, and practical teamwork.
+</p>
+</div>
+
+<!-- TRUTH 3 -->
+<div class="p-5 bg-surface border border-outline/50">
+<div class="flex items-center justify-between border-b border-primary pb-2 mb-3">
+<span class="font-headline-md text-headline-md font-bold uppercase text-primary">TRUTH III • TECHNOLOGY MUST SERVE SOCIETY, NOT JUST CAPITAL</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-dim px-2 py-0.5 font-bold text-on-surface">CIVIC PURPOSE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+If the magnificent power of artificial intelligence only succeeds in enriching six technology conglomerates in Silicon Valley while leaving millions of hardworking families anxious, unemployed, and displaced, then it is not progress—it is exploitation. The true greatness of a civilization is measured not by how fast its algorithms can generate quarterly profits, but by how well it protects the dignity and security of its humblest citizen.
+</p>
+</div>
+
+<!-- TRUTH 4 -->
+<div class="p-5 bg-surface-container-low border border-outline/50">
+<div class="flex items-center justify-between border-b border-primary pb-2 mb-3">
+<span class="font-headline-md text-headline-md font-bold uppercase text-primary">TRUTH IV • THE PERIL IS NOT THAT MACHINES WAKE UP, BUT THAT WE FALL ASLEEP</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-dim px-2 py-0.5 font-bold text-on-surface">CRITICAL CONSCIOUSNESS</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+The greatest threat of artificial intelligence is not a Hollywood robot with glowing red eyes. The real danger is much quieter: it is humans willingly surrendering our independent thought, our moral judgment, and our personal relationships to an algorithm designed solely to keep our eyes glued to an advertising feed. If we stop thinking critically, we become the machines.
+</p>
+</div>
+
+<!-- TRUTH 5 -->
+<div class="p-5 bg-surface border-2 border-secondary">
+<div class="flex items-center justify-between border-b border-secondary pb-2 mb-3">
+<span class="font-headline-md text-headline-md font-bold uppercase text-secondary">TRUTH V • DIGNITY BELONGS TO THE LIVING</span>
+<span class="font-label-caps text-label-caps uppercase bg-secondary text-on-primary px-2 py-0.5 font-bold">THE PERMANENT CORE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface text-justify leading-relaxed">
+The car mechanic tuning an engine in the afternoon sun, the nurse comforting an elderly patient, the schoolteacher inspiring a confused boy, the carpenter carving teakwood, and the street vendor boiling morning tea are not backward relics of the past. They are the living, breathing heart of human society. No algorithm can take the place of honest human work done with pride, patience, and compassion.
+</p>
+</div>
+</div>
+
+<!-- AUTHENTIC IMPRIMATUR BOX & FINAL BENEDICTION -->
+<div class="p-6 border-4 border-double border-primary bg-surface-container text-center my-6">
+<p class="font-label-caps text-label-caps uppercase tracking-[0.3em] text-secondary font-bold mb-2">
+AUTHENTICATED ARCHIVAL SPECIMEN • IMPRIMATUR NO. 4482-B
+</p>
+<h3 class="font-headline-lg text-headline-lg uppercase font-black text-primary mb-2">
+THE CHRONICLE BENEDICTION TO THE COMING AGE
+</h3>
+<p class="font-quote-pull text-quote-pull italic text-on-surface max-w-3xl mx-auto mb-4 leading-relaxed">
+“To the engineers, the students, the workers, and the citizens of our cities: Keep your tools sharp, your minds independent, and your humanity unbroken. The machine may calculate the path, but only you can choose where to walk.”
+</p>
+<div class="w-16 h-px bg-primary mx-auto mb-3"></div>
+<p class="font-dateline-meta text-dateline-meta uppercase tracking-widest text-on-surface-variant">
+TYPESET &amp; SEALED AT THE BROADSHEET DESK • COMPLETED 2026 EDITION
+</p>
+</div>
+
+<!-- BOTTOM NAVIGATION RETURN LINK -->
+<div class="w-full mt-6 pt-3 border-t-2 border-primary flex items-center justify-between font-dateline-meta text-dateline-meta text-on-surface-variant">
+<span>FINAL DISPATCH COMPLETE • ALL 8 BROADSHEET SECTIONS DELIVERED</span>
+<a href="#page1" onclick="navigateToPage(1); return false;" class="text-primary font-bold uppercase tracking-widest hover:text-secondary underline transition-colors cursor-pointer text-sm">↑ RETURN TO FRONT PAGE 1 (TOP)</a>
+<span class="hidden sm:inline">§ 4482-FINIS</span>
+</div>
+</div>
+  </div>
+  </main><footer class="w-full border-t-4 border-double border-primary pt-6 pb-12 mt-12 text-on-surface-variant"><div class="grid grid-cols-1 md:grid-cols-4 gap-6 pb-6 border-b border-outline/30 font-body-md text-body-md"><div class="border-r border-outline/20 pr-4"><h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-2">THE CHRONICLE</h4><p class="font-dateline-meta text-dateline-meta leading-relaxed">THE TECHNOLOGY CHRONICLE — SPECIAL DIGITAL EDITION.<br/>An independent archival dispatch published for computational economists and technologists.</p></div><div class="border-r border-outline/20 pr-4"><h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-2">RESEARCH METHODOLOGY</h4><p class="font-dateline-meta text-dateline-meta leading-relaxed">Field dispatches compiled from engineering centers across Whitefield, Cyberabad, and OMR. Triangulated empirical metrics and qualitative salon depositions.</p></div><div class="border-r border-outline/20 pr-4"><h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-2">INDEX OF DISPATCHES</h4><ul class="font-dateline-meta text-dateline-meta space-y-1 uppercase">
+  <li><a class="hover:underline text-on-surface-variant hover:text-primary cursor-pointer" href="#page1" onclick="navigateToPage(1); return false;">I. 2026 vs 2030 IT Impact (Page 1)</a></li>
+  <li><a class="hover:underline text-on-surface-variant hover:text-primary cursor-pointer" href="#page2" onclick="navigateToPage(2); return false;">II. The City Ripple Effect (Page 2)</a></li>
+  <li><a class="hover:underline text-on-surface-variant hover:text-primary cursor-pointer" href="#page3" onclick="navigateToPage(3); return false;">III. Cyber Leaks &amp; Privacy (Page 3)</a></li>
+  <li><a class="hover:underline text-on-surface-variant hover:text-primary cursor-pointer" href="#page4" onclick="navigateToPage(4); return false;">IV. Jobs Boom &amp; Craft Trades (Page 4)</a></li>
+  <li><a class="hover:underline text-on-surface-variant hover:text-primary cursor-pointer" href="#page5" onclick="navigateToPage(5); return false;">V. 2026–2030 Adoption Charts (Page 5)</a></li>
+  <li><a class="hover:underline text-on-surface-variant hover:text-primary cursor-pointer" href="#page6" onclick="navigateToPage(6); return false;">VI. The Great Knowledge Divide (Page 6)</a></li>
+  <li><a class="hover:underline text-on-surface-variant hover:text-primary cursor-pointer" href="#page7" onclick="navigateToPage(7); return false;">VII. The Pros &amp; Cons Ledger (Page 7)</a></li>
+  <li><a class="hover:underline text-on-surface-variant hover:text-primary cursor-pointer" href="#page8" onclick="navigateToPage(8); return false;">VIII. The Moral of AI (Page 8)</a></li>
+</ul></div><div><h4 class="font-headline-sm text-headline-sm uppercase text-primary mb-2">STATUTORY ARCHIVE</h4><div class="p-2 border border-outline bg-surface-container-low text-center"><p class="font-label-caps text-label-caps font-bold tracking-widest text-secondary">REGISTERED PRESS ARCHIVE</p><p class="font-dateline-meta text-dateline-meta font-bold mt-1 text-on-surface">ISSN: 1944-8210 / BENGALURU</p><p class="font-dateline-meta text-dateline-meta mt-1 text-on-surface-variant">AUTHENTICATED BROADSHEET SPECIMEN</p></div></div></div><div class="flex flex-col md:flex-row items-center justify-between pt-4 font-dateline-meta text-dateline-meta gap-2"><p>© 2026 THE TECHNOLOGY CHRONICLE PUBLISHING CO. ALL ARCHIVAL RIGHTS RESERVED.</p><p class="tracking-widest uppercase">TYPESET IN NEWSREADER &amp; GARAMOND • IMPRIMATUR NO. 4482-B</p></div></footer></div></div>
+<script id="chronicle-dynamic-router">
+  const pageTitles = {
+    1: "The Technology Chronicle — Page 1: 2026 vs 2030 Impact",
+    2: "The Technology Chronicle — Page 2: The City Ripple Effect",
+    3: "The Technology Chronicle — Page 3: Cyber Leaks & Privacy",
+    4: "The Technology Chronicle — Page 4: Jobs Boom & Craft Trades",
+    5: "The Technology Chronicle — Page 5: 2026–2030 Adoption Charts",
+    6: "The Technology Chronicle — Page 6: The Great Knowledge Divide",
+    7: "The Technology Chronicle — Page 7: Advantages & Disadvantages",
+    8: "The Technology Chronicle — Page 8: The Moral of AI"
+  };
+
+  const pageSectionNames = {
+    1: "SECTION I • 2026 VS 2030 IT IMPACT",
+    2: "SECTION II • THE CITY RIPPLE EFFECT",
+    3: "SECTION III • CYBER LEAKS & PRIVACY",
+    4: "SECTION IV • JOBS BOOM & CRAFT TRADES",
+    5: "SECTION V • 2026–2030 ADOPTION CHARTS",
+    6: "SECTION VI • THE GREAT KNOWLEDGE DIVIDE",
+    7: "SECTION VII • THE PROS & CONS LEDGER",
+    8: "SECTION VIII • THE MORAL OF AI"
+  };
+
+  let currentPage = 1;
+  let isTransitioning = false;
+  let soundEnabled = true;
+  let audioCtx = null;
+  let foldToastTimer = null;
+
+  // Reusable notification toast for tactile paper interaction
+  function showFoldToast(text, duration = 1500) {
+    const foldToast = document.getElementById('newspaperFoldToast');
+    const foldToastText = document.getElementById('foldToastText');
+    if (!foldToast || !foldToastText) return;
+    foldToastText.innerText = text;
+    foldToast.classList.remove('opacity-0', 'translate-y-2');
+    foldToast.classList.add('opacity-100', 'translate-y-0');
+    if (foldToastTimer) clearTimeout(foldToastTimer);
+    foldToastTimer = setTimeout(() => {
+      foldToast.classList.remove('opacity-100', 'translate-y-0');
+      foldToast.classList.add('opacity-0', 'translate-y-2');
+    }, duration);
+  }
+
+  // Safe AudioContext getter with gesture unlock
+  function getAudioContext() {
+    try {
+      if (!audioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioContextClass) {
+          audioCtx = new AudioContextClass();
+        }
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    } catch (e) {
+      console.debug("AudioContext error", e);
+    }
+    return audioCtx;
+  }
+
+  // Unlock AudioContext immediately on user touch/click/press anywhere
+  const unlockAudioGesture = () => {
+    const ctx = getAudioContext();
+    if (ctx && ctx.state === 'suspended') {
+      ctx.resume();
+    }
+  };
+  ['click', 'touchstart', 'keydown'].forEach(evt => {
+    window.addEventListener(evt, unlockAudioGesture, { once: true, passive: true });
+  });
+
+  // Soft tactile click for muting audio
+  function playMuteClickSound() {
+    try {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      const now = ctx.currentTime;
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(480, now);
+      osc.frequency.exponentialRampToValueAtTime(120, now + 0.06);
+
+      gain.gain.setValueAtTime(0.18, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.06);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.06);
+    } catch (e) {
+      console.debug("Mute sound error", e);
+    }
+  }
+
+  // =========================================================================
+  // AUTHENTIC REAL RECORDED NEWSPAPER PAGE TURN AUDIO (Foley Studio Recording)
+  // Embedded Base64 Data URI + Static MP3 for 100% offline & instant playback
+  // =========================================================================
+  const REAL_PAGE_FLIP_URL = './page-flip.mp3';
+  const REAL_NEWSPAPER_URL = './newspaper-page-turn.mp3';
+  const REAL_PAGE_FLIP_B64 = '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AAAAASwAAAAAAAAlgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/+9YAYAAAAABLAAAAAAAACWAAAAAAAAEsAAAAAAAAJYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//vWAGAAAAAASwAAAAAAAAlgAAAAAAABLAAAAAAAACWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/71gBgAAAAAEsAAAAAAAAJYAAAAAAAASwAAAAAAAAlgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/+9YAYAAAAABLAAAAAAAACWAAAAAAAAEsAAAAAAAAJYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//vWAGAAAAAASwAAAAAAAAlgAAAAAAABLAAAAAAAACWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/71gBgAAAAAEsAAAAAAAAJYAAAAAAAASwAAAAAAAAlgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/+9YAYAAAAABLAAAAAAAACWAAAAAAAAEsAAAAAAAAJYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//vWAGAAAAAASwAAAAAAAAlgAAAAAAABLAAAAAAAACWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/71gBgAAAAAEsAAAAAAAAJYAAAAAAAASwAAAAAAAAlgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/+9YAYAAAAABLAAAAAAAACWAAAAAAAAEsAAAAAAAAJYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAAIAAgACAA';
+
+  // Primary: Real Newspaper Page Turning Audio Player
+  function playPaperSound(forcePlay = false) {
+    if (!soundEnabled && !forcePlay) return;
+
+    // First attempt: Instant HTML5 Audio with real recorded newspaper page turn
+    try {
+      const realAudio = new Audio(REAL_PAGE_FLIP_URL);
+      realAudio.volume = 0.95;
+      const playPromise = realAudio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((e) => {
+          // Fallback to embedded Base64 data URI if relative file path has CORS/local restrictions
+          try {
+            const b64Audio = new Audio('data:audio/mp3;base64,' + REAL_PAGE_FLIP_B64);
+            b64Audio.volume = 0.95;
+            b64Audio.play().catch(() => playSynthesizedPaperFallback());
+          } catch(err) {
+            playSynthesizedPaperFallback();
+          }
+        });
+      }
+    } catch(e) {
+      playSynthesizedPaperFallback();
+    }
+  }
+
+  // Backup: Web Audio Synthesizer Fallback (in case media decoding is disabled)
+  function playSynthesizedPaperFallback() {
+    try {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const duration = 0.85;
+      const sampleRate = ctx.sampleRate || 44100;
+      const bufferSize = Math.floor(sampleRate * duration);
+      const buffer = ctx.createBuffer(1, bufferSize, sampleRate);
+      const data = buffer.getChannelData(0);
+
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        let pink = (b0 + b1 + b2 + b3 + b4 + b5 + white * 0.5362) * 0.14;
+        if (Math.random() < 0.015) pink += (Math.random() * 2 - 1) * 0.38;
+        const t = i / bufferSize;
+        const sweepEnvelope = Math.sin(t * Math.PI) * (0.80 + 0.30 * Math.sin(t * Math.PI * 4.5));
+        data[i] = pink * Math.max(0, sweepEnvelope);
+      }
+
+      const now = ctx.currentTime;
+      const noiseSource = ctx.createBufferSource();
+      noiseSource.buffer = buffer;
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(650, now);
+      filter.frequency.linearRampToValueAtTime(1450, now + 0.35);
+      filter.frequency.exponentialRampToValueAtTime(380, now + duration);
+      filter.Q.setValueAtTime(1.4, now);
+
+      const highShelf = ctx.createBiquadFilter();
+      highShelf.type = 'highshelf';
+      highShelf.frequency.setValueAtTime(2600, now);
+      highShelf.gain.setValueAtTime(4.5, now);
+
+      const masterGain = ctx.createGain();
+      masterGain.gain.setValueAtTime(0.01, now);
+      masterGain.gain.linearRampToValueAtTime(0.48, now + 0.26);
+      masterGain.gain.linearRampToValueAtTime(0.32, now + 0.55);
+      masterGain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+
+      noiseSource.connect(filter);
+      filter.connect(highShelf);
+      highShelf.connect(masterGain);
+      masterGain.connect(ctx.destination);
+      noiseSource.start(now);
+    } catch(e) {}
+  }
+
+  // Toggle Paper Sound with instant audio preview & visual toast
+  function togglePaperSound() {
+    soundEnabled = !soundEnabled;
+    const soundText = document.getElementById('soundText');
+    const soundIcon = document.getElementById('soundIcon');
+    const soundToggleBtn = document.getElementById('soundToggleBtn');
+    
+    if (soundText && soundIcon) {
+      soundText.innerText = soundEnabled ? "PAPER AUDIO: ON" : "PAPER AUDIO: OFF";
+      soundIcon.innerText = soundEnabled ? "🔊" : "🔈";
+    }
+
+    if (soundToggleBtn) {
+      soundToggleBtn.classList.add('scale-105', 'bg-surface-container-high');
+      setTimeout(() => {
+        soundToggleBtn.classList.remove('scale-105', 'bg-surface-container-high');
+      }, 200);
+    }
+
+    if (soundEnabled) {
+      // Play real authentic recorded newspaper turn audio immediately
+      playPaperSound(true);
+      showFoldToast("NEWSPAPER AUDIO: ON 🔊");
+    } else {
+      playMuteClickSound();
+      showFoldToast("NEWSPAPER AUDIO: OFF 🔈");
+    }
+  }
+
+  // Update Nav Buttons Active Highlight
+  function updateNavHighlight(targetPage) {
+    document.querySelectorAll('.chronicle-nav-btn').forEach(btn => {
+      const target = parseInt(btn.getAttribute('data-target-page'), 10);
+      if (target === targetPage) {
+        btn.className = 'chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] bg-primary text-on-primary font-bold shadow-sm transition-colors cursor-pointer whitespace-nowrap';
+      } else {
+        btn.className = 'chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap';
+      }
+    });
+  }
+
+  // LIGHTWEIGHT VIEW CLONER: Clones ONLY the single active page view (zero overhead!)
+  function createLightweightPageSnapshot(pageNum) {
+    const sheet = document.getElementById('newspaper-broadsheet-sheet');
+    const wrapper = document.createElement('div');
+    // Ensure 100% identical class list and padding to live broadsheet sheet
+    wrapper.className = sheet ? sheet.className : 'w-full px-4 sm:px-8 md:px-12 pb-8';
+    wrapper.style.backgroundColor = '#fff9ec';
+    wrapper.style.backgroundImage = "linear-gradient(rgba(255, 249, 236, 0.20), rgba(255, 249, 236, 0.20)), url('./stitch_assets/crumpled_newspaper_bg.jpg')";
+    wrapper.style.backgroundSize = '100% auto';
+    wrapper.style.pointerEvents = 'none';
+
+    // 1. Clone Header with identical dimensions and highlight button for pageNum
+    const header = sheet ? sheet.querySelector('header') : null;
+    if (header) {
+      const clonedHeader = header.cloneNode(true);
+      clonedHeader.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+      clonedHeader.querySelectorAll('.chronicle-nav-btn').forEach(btn => {
+        const target = parseInt(btn.getAttribute('data-target-page'), 10);
+        if (target === pageNum) {
+          btn.className = 'chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] bg-primary text-on-primary font-bold shadow-sm transition-colors cursor-pointer whitespace-nowrap';
+        } else {
+          btn.className = 'chronicle-nav-btn shrink-0 px-2 py-0.5 sm:px-2.5 sm:py-0.5 font-folio-header text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[11px] uppercase tracking-[0.02em] text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer whitespace-nowrap';
+        }
+      });
+      wrapper.appendChild(clonedHeader);
+    }
+
+    // 2. Clone <main> wrapper with identical py-6 padding & styles so text Y-coordinates match 100%
+    const mainEl = sheet ? sheet.querySelector('main') : null;
+    const clonedMain = document.createElement('main');
+    clonedMain.className = mainEl ? mainEl.className : 'w-full py-6 bg-transparent min-h-[700px] relative overflow-visible';
+
+    // 3. Clone target page view
+    const pageView = document.getElementById(`page-view-${pageNum}`);
+    if (pageView) {
+      const clonedView = pageView.cloneNode(true);
+      clonedView.classList.remove('hidden');
+      clonedView.classList.add('block');
+      clonedView.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+      clonedMain.appendChild(clonedView);
+    }
+    wrapper.appendChild(clonedMain);
+
+    return wrapper;
+  }
+
+  // SILKY SMOOTH 1-SECOND BROADSHEET PAGE TURN
+  function navigateToPage(pageNum, updateHistory = true) {
+    const targetPage = parseInt(pageNum, 10);
+    if (isNaN(targetPage) || targetPage < 1 || targetPage > 8) return;
+    if (targetPage === currentPage && !isTransitioning) {
+      playPaperSound();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    
+    // CRITICAL: Block duplicate / multiple triggers
+    if (isTransitioning) return;
+    isTransitioning = true;
+
+    const prevPage = currentPage;
+    currentPage = targetPage;
+    const isForward = targetPage >= prevPage;
+
+    const broadsheetSheet = document.getElementById('newspaper-broadsheet-sheet');
+    const rig = document.getElementById('newspaper-single-page-turn-rig');
+    const leaf = document.getElementById('page-turn-leaf');
+    const spineShadow = document.getElementById('page-turn-spine-shadow');
+    const turnUnderLeftContent = document.getElementById('turnUnderLeftContent');
+    const turnUnderRightContent = document.getElementById('turnUnderRightContent');
+    const turnFrontContent = document.getElementById('turnFrontContent');
+    const turnBackContent = document.getElementById('turnBackContent');
+
+    const currentView = document.getElementById(`page-view-${prevPage}`);
+    const targetView = document.getElementById(`page-view-${targetPage}`);
+    const foldToast = document.getElementById('newspaperFoldToast');
+    const foldToastText = document.getElementById('foldToastText');
+
+    // 1. Play realistic paper turning audio
+    playPaperSound();
+
+    // 2. Display Toast Indicator (Subtle at bottom)
+    if (foldToast && foldToastText) {
+      foldToastText.innerText = `PAGE FLIP → ${pageSectionNames[targetPage] || 'DISPATCH'}`;
+      foldToast.classList.remove('opacity-0', 'translate-y-2');
+      foldToast.classList.add('opacity-100', 'translate-y-0');
+    }
+
+    // 3. Update Nav Button Active Highlight on live header
+    updateNavHighlight(targetPage);
+
+    // 4. INJECT EXACT PIXEL-MEASURED REAL CONTENT INTO ALL 4 BUFFERS (0.0px OFFSET)
+    if (broadsheetSheet && turnFrontContent && turnBackContent && turnUnderLeftContent && turnUnderRightContent) {
+      turnFrontContent.innerHTML = '';
+      turnBackContent.innerHTML = '';
+      turnUnderLeftContent.innerHTML = '';
+      turnUnderRightContent.innerHTML = '';
+
+      const liveWidth = broadsheetSheet.getBoundingClientRect().width;
+      const halfWidth = liveWidth / 2;
+
+      // Helper to configure absolute snapshot positioning
+      function setupSnapshot(el, leftOffset) {
+        el.style.position = 'absolute';
+        el.style.top = '0px';
+        el.style.width = liveWidth + 'px';
+        el.style.minWidth = liveWidth + 'px';
+        el.style.maxWidth = liveWidth + 'px';
+        el.style.left = leftOffset + 'px';
+      }
+
+      if (isForward) {
+        // Forward turn:
+        // - Stationary Left Underlayer: Outgoing page (prevPage) left half
+        const snapUnderLeft = createLightweightPageSnapshot(prevPage);
+        setupSnapshot(snapUnderLeft, 0);
+        turnUnderLeftContent.appendChild(snapUnderLeft);
+
+        // - Stationary Right Underlayer: Target page (targetPage) right half (revealed as leaf lifts!)
+        const snapUnderRight = createLightweightPageSnapshot(targetPage);
+        setupSnapshot(snapUnderRight, -halfWidth);
+        turnUnderRightContent.appendChild(snapUnderRight);
+
+        // - Turning Leaf Front: Outgoing page (prevPage) right half (lifts up)
+        const snapFront = createLightweightPageSnapshot(prevPage);
+        setupSnapshot(snapFront, -halfWidth);
+        turnFrontContent.appendChild(snapFront);
+
+        // - Turning Leaf Back: Target page (targetPage) left half (lands on left)
+        const snapBack = createLightweightPageSnapshot(targetPage);
+        setupSnapshot(snapBack, 0);
+        turnBackContent.appendChild(snapBack);
+      } else {
+        // Backward turn:
+        // - Stationary Left Underlayer: Target page (targetPage) left half (revealed as leaf lifts!)
+        const snapUnderLeft = createLightweightPageSnapshot(targetPage);
+        setupSnapshot(snapUnderLeft, 0);
+        turnUnderLeftContent.appendChild(snapUnderLeft);
+
+        // - Stationary Right Underlayer: Outgoing page (prevPage) right half
+        const snapUnderRight = createLightweightPageSnapshot(prevPage);
+        setupSnapshot(snapUnderRight, -halfWidth);
+        turnUnderRightContent.appendChild(snapUnderRight);
+
+        // - Turning Leaf Front: Outgoing page (prevPage) left half (lifts up from left)
+        const snapFront = createLightweightPageSnapshot(prevPage);
+        setupSnapshot(snapFront, 0);
+        turnFrontContent.appendChild(snapFront);
+
+        // - Turning Leaf Back: Target page (targetPage) right half (lands on right)
+        const snapBack = createLightweightPageSnapshot(targetPage);
+        setupSnapshot(snapBack, -halfWidth);
+        turnBackContent.appendChild(snapBack);
+      }
+    }
+
+    // 5. TRIGGER SILKY-SMOOTH CONTINUOUS TURN VIA requestAnimationFrame
+    if (rig && leaf) {
+      leaf.className = 'page-turn-leaf';
+      rig.classList.add('turn-active');
+      if (spineShadow) spineShadow.style.opacity = '0.35';
+
+      // Launch on next animation frame for locked 60/120fps sync
+      requestAnimationFrame(() => {
+        leaf.className = isForward 
+          ? 'page-turn-leaf turn-forward anim-single-flip-forward' 
+          : 'page-turn-leaf turn-backward anim-single-flip-backward';
+      });
+
+      // 6. At 1000ms: Silky smooth turn fully completes and lands flat!
+      setTimeout(() => {
+        // Swap underlying live sheet views now that animation has landed
+        if (currentView) {
+          currentView.classList.add('hidden');
+          currentView.classList.remove('block');
+        }
+        if (targetView) {
+          targetView.classList.remove('hidden');
+          targetView.classList.add('block');
+        }
+
+        if (pageTitles[targetPage]) {
+          document.title = pageTitles[targetPage];
+        }
+
+        if (updateHistory) {
+          if (window.location.hash !== `#page${targetPage}`) {
+            history.pushState({ page: targetPage }, '', `#page${targetPage}`);
+          }
+        }
+
+        // Instant reset if user was scrolled down
+        if (window.scrollY > 200) {
+          window.scrollTo(0, 0);
+        }
+
+        // Clean up rig
+        rig.classList.remove('turn-active');
+        leaf.className = 'page-turn-leaf';
+        if (turnFrontContent) turnFrontContent.innerHTML = '';
+        if (turnBackContent) turnBackContent.innerHTML = '';
+        if (turnUnderLeftContent) turnUnderLeftContent.innerHTML = '';
+        if (turnUnderRightContent) turnUnderRightContent.innerHTML = '';
+        if (spineShadow) spineShadow.style.opacity = '0';
+
+        if (foldToast) {
+          foldToast.classList.remove('opacity-100', 'translate-y-0');
+          foldToast.classList.add('opacity-0', 'translate-y-2');
+        }
+        isTransitioning = false; // Finished 1.0s flip!
+      }, 1000);
+
+    } else {
+      // Fallback
+      if (currentView) currentView.classList.add('hidden');
+      if (targetView) targetView.classList.remove('hidden');
+      isTransitioning = false;
+    }
+  }
+
+  // Handle Browser Back / Forward buttons & Hash Changes
+  window.addEventListener('popstate', (e) => {
+    if (e.state && e.state.page) {
+      navigateToPage(e.state.page, false);
+      return;
+    }
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#page')) {
+      const p = parseInt(hash.replace('#page', ''), 10);
+      if (p >= 1 && p <= 8) {
+        navigateToPage(p, false);
+        return;
+      }
+    }
+    navigateToPage(1, false);
+  });
+
+  // Keyboard Arrow Navigation for turning broadsheet pages
+  window.addEventListener('keydown', (e) => {
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) return;
+    if (e.key === 'ArrowRight') {
+      if (currentPage < 8) {
+        e.preventDefault();
+        navigateToPage(currentPage + 1);
+      }
+    } else if (e.key === 'ArrowLeft') {
+      if (currentPage > 1) {
+        e.preventDefault();
+        navigateToPage(currentPage - 1);
+      }
+    }
+  });
+
+  // Handle Direct Hash on Initial Load
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryPage = urlParams.get('page');
+
+    let initPage = 1;
+    if (hash && hash.startsWith('#page')) {
+      const parsed = parseInt(hash.replace('#page', ''), 10);
+      if (parsed >= 1 && parsed <= 5) initPage = parsed;
+    } else if (queryPage) {
+      const parsed = parseInt(queryPage, 10);
+      if (parsed >= 1 && parsed <= 5) initPage = parsed;
+    }
+
+    currentPage = initPage;
+    for (let i = 1; i <= 8; i++) {
+      const el = document.getElementById(`page-view-${i}`);
+      if (el) {
+        if (i === initPage) {
+          el.classList.remove('hidden');
+          el.classList.add('block');
+        } else {
+          el.classList.add('hidden');
+          el.classList.remove('block');
+        }
+      }
+    }
+
+    updateNavHighlight(initPage);
+
+    if (pageTitles[initPage]) {
+      document.title = pageTitles[initPage];
+    }
+  });
+</script>
+</body>
+</html>
